@@ -42,8 +42,13 @@ static const short base64DecodingTable[] =
 
 +(NSString *)userAgentString
 {
+#if TARGET_OS_IPHONE
     NSString *sn  = [[[UIDevice currentDevice] systemName] stringByReplacingOccurrencesOfString:@" " withString:@"-"];
     NSString *sv  = [[UIDevice currentDevice] systemVersion];
+#else
+    NSString *sn  = [[[NSProcessInfo processInfo] operatingSystemName] stringByReplacingOccurrencesOfString:@" " withString:@"-"];
+    NSString *sv  = [[NSProcessInfo processInfo] operatingSystemVersionString];    
+#endif
     NSString *loc = [[NSLocale currentLocale] localeIdentifier];
     NSString *ua  = [NSString stringWithFormat: [NSString stringWithString:AWS_SDK_USER_AGENT_FORMAT], [NSString stringWithString:AWS_SDK_VERSION], sn, sv, loc];
 
@@ -279,6 +284,7 @@ static const short base64DecodingTable[] =
                        @"video/ogv", @"ogv",
                        nil];
     }
+    extension = [extension lowercaseString];
     NSString *mimetype = (NSString *)[lookupTable objectForKey:extension];
     return mimetype == nil ? @"application/octet-stream" : mimetype;
 }

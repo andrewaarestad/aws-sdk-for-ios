@@ -15,7 +15,7 @@
 
 #import "DynamoDBKeySchemaUnmarshaller.h"
 #import "DynamoDBExceptionUnmarshaller.h"
-#import "../AmazonSDKUtil.h"
+#import "AmazonSDKUtil.h"
 #import "DynamoDBKeySchemaElementUnmarshaller.h"
 #import "DynamoDBKeySchemaElementUnmarshaller.h"
 

@@ -15,7 +15,7 @@
 
 #import "DynamoDBDeleteTableResponseUnmarshaller.h"
 #import "DynamoDBExceptionUnmarshaller.h"
-#import "../AmazonSDKUtil.h"
+#import "AmazonSDKUtil.h"
 #import "DynamoDBTableDescriptionUnmarshaller.h"
 
 

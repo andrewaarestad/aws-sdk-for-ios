@@ -15,7 +15,7 @@
 
 #import "DynamoDBAttributeValueUnmarshaller.h"
 #import "DynamoDBExceptionUnmarshaller.h"
-#import "../AmazonSDKUtil.h"
+#import "AmazonSDKUtil.h"
 
 
 @implementation DynamoDBAttributeValueUnmarshaller

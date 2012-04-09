@@ -15,7 +15,7 @@
 
 #import "DynamoDBTableDescriptionUnmarshaller.h"
 #import "DynamoDBExceptionUnmarshaller.h"
-#import "../AmazonSDKUtil.h"
+#import "AmazonSDKUtil.h"
 #import "DynamoDBKeySchemaUnmarshaller.h"
 #import "DynamoDBProvisionedThroughputDescriptionUnmarshaller.h"
 

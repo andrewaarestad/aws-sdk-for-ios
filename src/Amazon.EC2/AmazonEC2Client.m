@@ -14,7 +14,7 @@
  */
 
 #import "AmazonEC2Client.h"
-#import "../AmazonServiceRequest.h"
+#import "AmazonServiceRequest.h"
 
 
 @implementation AmazonEC2Client

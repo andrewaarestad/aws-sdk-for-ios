@@ -14,7 +14,7 @@
  */
 
 #import "AmazonSQSClient.h"
-#import "../AmazonServiceRequest.h"
+#import "AmazonServiceRequest.h"
 
 
 @implementation AmazonSQSClient

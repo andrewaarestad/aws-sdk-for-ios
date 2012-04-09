@@ -14,7 +14,7 @@
  */
 
 #import "AmazonDynamoDBClient.h"
-#import "../AmazonServiceRequest.h"
+#import "AmazonServiceRequest.h"
 
 
 @implementation AmazonDynamoDBClient

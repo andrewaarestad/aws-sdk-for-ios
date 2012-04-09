@@ -14,7 +14,7 @@
  */
 
 #import "AmazonSimpleDBClient.h"
-#import "../AmazonServiceRequest.h"
+#import "AmazonServiceRequest.h"
 
 
 @implementation AmazonSimpleDBClient

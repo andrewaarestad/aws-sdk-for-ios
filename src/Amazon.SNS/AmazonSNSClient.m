@@ -14,7 +14,7 @@
  */
 
 #import "AmazonSNSClient.h"
-#import "../AmazonServiceRequest.h"
+#import "AmazonServiceRequest.h"
 
 
 @implementation AmazonSNSClient

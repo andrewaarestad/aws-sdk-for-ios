@@ -14,7 +14,7 @@
  */
 
 #import "AmazonCloudWatchClient.h"
-#import "../AmazonServiceRequest.h"
+#import "AmazonServiceRequest.h"
 
 
 @implementation AmazonCloudWatchClient

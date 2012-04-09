@@ -14,7 +14,7 @@
  */
 
 #import "AmazonAutoScalingClient.h"
-#import "../AmazonServiceRequest.h"
+#import "AmazonServiceRequest.h"
 
 
 @implementation AmazonAutoScalingClient

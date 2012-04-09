@@ -14,7 +14,13 @@
  */
 
 #import <Foundation/Foundation.h>
+
+#if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
+#else
+#import <Cocoa/Cocoa.h>
+#endif
+
 #import "AmazonClientException.h"
 
 #define AWS_SDK_VERSION              @"1.2.1"

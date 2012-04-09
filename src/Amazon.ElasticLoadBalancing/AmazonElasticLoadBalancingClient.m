@@ -14,7 +14,7 @@
  */
 
 #import "AmazonElasticLoadBalancingClient.h"
-#import "../AmazonServiceRequest.h"
+#import "AmazonServiceRequest.h"
 
 
 @implementation AmazonElasticLoadBalancingClient

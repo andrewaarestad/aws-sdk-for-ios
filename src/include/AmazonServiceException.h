@@ -59,7 +59,7 @@
  *
  * @param theStatusCode The HTTP status code.
  */
-+(AmazonServiceException *)exceptionWithStatusCode:(int)theStatusCode;
++(AmazonServiceException *)exceptionWithStatusCode:(NSInteger)theStatusCode;
 
 /** Return an exception with the given message, error code, status, and request ID.
  *
