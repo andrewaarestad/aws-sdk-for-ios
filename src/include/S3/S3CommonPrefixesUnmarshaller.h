@@ -15,7 +15,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "../AmazonUnmarshallerXMLParserDelegate.h"
+#import "AmazonUnmarshallerXMLParserDelegate.h"
 
 @interface S3CommonPrefixesUnmarshaller:AmazonUnmarshallerXMLParserDelegate {
     NSMutableArray *commonPrefixes;

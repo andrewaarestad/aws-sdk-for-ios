@@ -15,7 +15,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "../AmazonUnmarshallerXMLParserDelegate.h"
+#import "AmazonUnmarshallerXMLParserDelegate.h"
 #import "S3BucketVersioningConfiguration.h"
 
 /** Creates an S3BucketVersioningConfiguration from an XML service repsonse. */

@@ -15,7 +15,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "../AmazonClientException.h"
+#import "AmazonClientException.h"
 
 #import "S3AbstractPutRequest.h"
 #import "S3Constants.h"

@@ -14,7 +14,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "../AmazonUnmarshallerXMLParserDelegate.h"
+#import "AmazonUnmarshallerXMLParserDelegate.h"
 #import "DeletedObject.h"
 
 @interface S3DeletedObjectUnmarshaller:AmazonUnmarshallerXMLParserDelegate

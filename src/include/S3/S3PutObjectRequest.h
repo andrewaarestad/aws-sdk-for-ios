@@ -15,7 +15,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "../AmazonLogger.h"
+#import "AmazonLogger.h"
 
 #import "S3AbstractPutRequest.h"
 #import "S3Constants.h"

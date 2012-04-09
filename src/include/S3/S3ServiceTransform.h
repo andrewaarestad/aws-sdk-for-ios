@@ -13,7 +13,7 @@
  * permissions and limitations under the License.
  */
 
-#import "../AmazonUnmarshallerXMLParserDelegate.h"
+#import "AmazonUnmarshallerXMLParserDelegate.h"
 
 #import "S3OwnerUnmarshaller.h"
 #import "S3BucketUnmarshaller.h"

@@ -15,7 +15,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "../AmazonUnmarshallerXMLParserDelegate.h"
+#import "AmazonUnmarshallerXMLParserDelegate.h"
 
 #import "S3Grantee.h"
 #import "S3Grant.h"

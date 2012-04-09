@@ -14,7 +14,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "../AmazonUnmarshallerXMLParserDelegate.h"
+#import "AmazonUnmarshallerXMLParserDelegate.h"
 #import "BucketWebsiteConfiguration.h"
 
 /** Creates an BucketWebsiteConfiguration from an XML service repsonse. */

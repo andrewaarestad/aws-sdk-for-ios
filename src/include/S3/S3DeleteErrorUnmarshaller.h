@@ -14,7 +14,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "../AmazonUnmarshallerXMLParserDelegate.h"
+#import "AmazonUnmarshallerXMLParserDelegate.h"
 #import "DeleteError.h"
 
 @interface S3DeleteErrorUnmarshaller:AmazonUnmarshallerXMLParserDelegate

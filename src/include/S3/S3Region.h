@@ -15,7 +15,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "../AmazonClientException.h"
+#import "AmazonClientException.h"
 
 #define kS3RegionUSWest1         @"us-west-1"
 #define kS3RegionUSWest2         @"us-west-2"

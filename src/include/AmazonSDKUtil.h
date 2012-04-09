@@ -17,14 +17,15 @@
 
 #if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
+#define AWS_SDK_USER_AGENT_FORMAT    @"aws-sdk-iOS/%@ %@/%@ %@"
 #else
 #import <Cocoa/Cocoa.h>
+#define AWS_SDK_USER_AGENT_FORMAT    @"aws-sdk-Mac/%@ %@/%@ %@"
 #endif
 
 #import "AmazonClientException.h"
 
 #define AWS_SDK_VERSION              @"1.2.1"
-#define AWS_SDK_USER_AGENT_FORMAT    @"aws-sdk-iOS/%@ %@/%@ %@"
 #define kISO8061DateFormat           @"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
 #define kISO8601DateFormat           @"yyyy-MM-dd'T'HH:mm:ss'Z'"
 #define kRFC822DateFormat            @"EEE, dd MMM yyyy HH:mm:ss z"

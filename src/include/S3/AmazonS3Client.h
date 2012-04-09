@@ -16,8 +16,8 @@
 #import <Foundation/Foundation.h>
 #import <CommonCrypto/CommonHMAC.h>
 
-#import "../AmazonWebServiceClient.h"
-#import "../AmazonSDKUtil.h"
+#import "AmazonWebServiceClient.h"
+#import "AmazonSDKUtil.h"
 
 #import "S3Constants.h"
 #import "S3AbstractPutRequest.h"

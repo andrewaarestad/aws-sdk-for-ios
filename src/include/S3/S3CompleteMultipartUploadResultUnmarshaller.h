@@ -14,7 +14,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "../AmazonUnmarshallerXMLParserDelegate.h"
+#import "AmazonUnmarshallerXMLParserDelegate.h"
 #import "S3CompleteMultipartUploadResult.h"
 
 @interface S3CompleteMultipartUploadResultUnmarshaller:AmazonUnmarshallerXMLParserDelegate {

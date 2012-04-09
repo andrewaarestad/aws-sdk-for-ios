@@ -15,8 +15,8 @@
 
 
 #import <Foundation/Foundation.h>
-#import "../AmazonUnmarshallerXMLParserDelegate.h"
-#import "../AmazonSDKUtil.h"
+#import "AmazonUnmarshallerXMLParserDelegate.h"
+#import "AmazonSDKUtil.h"
 #import "S3MultipartUpload.h"
 #import "S3OwnerUnmarshaller.h"
 

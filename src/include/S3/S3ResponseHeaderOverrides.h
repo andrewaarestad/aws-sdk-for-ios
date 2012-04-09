@@ -14,7 +14,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "../AmazonSDKUtil.h"
+#import "AmazonSDKUtil.h"
 
 #define kS3ResponseHdrContentType           @"response-content-type"
 #define kS3ResponseHdrContentLanguage       @"response-content-language"

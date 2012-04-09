@@ -15,7 +15,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "../AmazonUnmarshallerXMLParserDelegate.h"
+#import "AmazonUnmarshallerXMLParserDelegate.h"
 #import "S3BucketLifecycleConfiguration.h"
 
 /** Creates an S3BucketLifecycleConfiguration from an XML service repsonse. */

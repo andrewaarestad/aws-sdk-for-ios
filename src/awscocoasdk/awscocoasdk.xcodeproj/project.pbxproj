@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8C2A87EB15336E12002B56EC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2A87EA15336E12002B56EC /* Cocoa.framework */; };
 		8C2A87F515336E13002B56EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C2A87F315336E13002B56EC /* InfoPlist.strings */; };
-		8C2A87F915336E13002B56EC /* awscocoasdk.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2A87F815336E13002B56EC /* awscocoasdk.m */; };
 		8C2A932F15336EB0002B56EC /* AmazonAutoScalingClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2A880115336EAD002B56EC /* AmazonAutoScalingClient.m */; };
 		8C2A933015336EB0002B56EC /* AutoScalingRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2A880215336EAD002B56EC /* AutoScalingRequest.m */; };
 		8C2A933115336EB0002B56EC /* AutoScalingResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2A880315336EAD002B56EC /* AutoScalingResponse.m */; };
@@ -2836,8 +2835,6 @@
 		8C2A87F215336E13002B56EC /* awscocoasdk-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "awscocoasdk-Info.plist"; sourceTree = "<group>"; };
 		8C2A87F415336E13002B56EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8C2A87F615336E13002B56EC /* awscocoasdk-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "awscocoasdk-Prefix.pch"; sourceTree = "<group>"; };
-		8C2A87F715336E13002B56EC /* awscocoasdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = awscocoasdk.h; sourceTree = "<group>"; };
-		8C2A87F815336E13002B56EC /* awscocoasdk.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = awscocoasdk.m; sourceTree = "<group>"; };
 		8C2A880115336EAD002B56EC /* AmazonAutoScalingClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmazonAutoScalingClient.m; sourceTree = "<group>"; };
 		8C2A880215336EAD002B56EC /* AutoScalingRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoScalingRequest.m; sourceTree = "<group>"; };
 		8C2A880315336EAD002B56EC /* AutoScalingResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoScalingResponse.m; sourceTree = "<group>"; };
@@ -5675,6 +5672,7 @@
 				8C2A87E815336E12002B56EC /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		8C2A87E815336E12002B56EC /* Products */ = {
 			isa = PBXGroup;
@@ -5707,8 +5705,6 @@
 			isa = PBXGroup;
 			children = (
 				8C2A87FF15336EAD002B56EC /* src */,
-				8C2A87F715336E13002B56EC /* awscocoasdk.h */,
-				8C2A87F815336E13002B56EC /* awscocoasdk.m */,
 				8C2A87F115336E13002B56EC /* Supporting Files */,
 			);
 			path = awscocoasdk;
@@ -10328,7 +10324,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C2A87F915336E13002B56EC /* awscocoasdk.m in Sources */,
 				8C2A932F15336EB0002B56EC /* AmazonAutoScalingClient.m in Sources */,
 				8C2A933015336EB0002B56EC /* AutoScalingRequest.m in Sources */,
 				8C2A933115336EB0002B56EC /* AutoScalingResponse.m in Sources */,
@@ -11807,6 +11802,7 @@
 				INFOPLIST_FILE = "awscocoasdk/awscocoasdk-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -11822,6 +11818,7 @@
 				INFOPLIST_FILE = "awscocoasdk/awscocoasdk-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;

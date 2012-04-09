@@ -15,9 +15,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "../AmazonSDKUtil.h"
-#import "../AmazonAuthUtils.h"
-#import "../AmazonServiceRequest.h"
+#import "AmazonSDKUtil.h"
+#import "AmazonAuthUtils.h"
+#import "AmazonServiceRequest.h"
 
 #import "S3Constants.h"
 
