@@ -16,6 +16,7 @@
 
 #import "DynamoDBListTablesRequestMarshaller.h"
 #import "AmazonJSON.h"
+#import "../AmazonSDKUtil.h"
 
 @implementation DynamoDBListTablesRequestMarshaller
 
@@ -46,7 +47,7 @@
 
 
     request.content = [AmazonJSON JSONRepresentation:json];
-    [request addValue:[NSString stringWithFormat:@"%d", [request.content length]]    forHeader:@"Content-Length"];
+    [request addValue:[NSString stringWithFormat:@"%d", [[request.content dataUsingEncoding:NSUTF8StringEncoding] length]]    forHeader:@"Content-Length"];
 
     return [request autorelease];
 }

@@ -14,7 +14,9 @@
  */
 
 #import "S3Response.h"
+#import "S3GetObjectResponse.h"
 #import "AmazonLogger.h"
+
 
 @implementation S3Response
 
@@ -52,7 +54,7 @@
     NSArray  *parts = [tmp componentsSeparatedByString:@"-"];
 
     NSString *keyName = [(NSString *)[parts objectAtIndex:0] lowercaseString];
-    for (int i = 1; i < [parts count]; i++) {
+    for (NSInteger i = 1; i < [parts count]; i++) {
         keyName = [keyName stringByAppendingString:[[(NSString *)[parts objectAtIndex:i] lowercaseString] capitalizedString]];
     }
 
@@ -67,8 +69,12 @@
         [self setValue:[self parseDateHeader:value] forKey:keyName];
     }
     else if ([typeName isEqualToString:@"Ti"]) {
-        int v = [(NSString *) value intValue];
-        [self setValue:[NSNumber numberWithInt:v] forKey:keyName];
+        NSInteger v = [(NSString *) value integerValue];
+        [self setValue:[NSNumber numberWithInteger:v] forKey:keyName];
+    }
+    else if ([typeName isEqualToString:@"Tq"]) {
+        int64_t foo = [value longLongValue];
+        [self setValue:[NSNumber numberWithLongLong:foo] forKey:keyName];
     }
 }
 
@@ -113,6 +119,8 @@
 }
 
 // TODO: Make the body property readonly when all operations are converted to the delegate technique.
+// TODO: It seems like nothing in the SDK is calling this method. -Yosuke
+/*
 -(void)setBody:(NSData *)data
 {
     if (nil != body) {
@@ -122,6 +130,7 @@
 
     [self processBody];
 }
+*/
 
 // Override this to perform processing on the body.
 -(void)processBody
@@ -140,8 +149,8 @@
     NSMutableString *buffer = [[NSMutableString alloc] initWithCapacity:256];
 
     [buffer appendString:@"{"];
-    [buffer appendString:[[[NSString alloc] initWithFormat:@"Headers: %d,", headers] autorelease]];
-    [buffer appendString:[[[NSString alloc] initWithFormat:@"Content-Length: %d,", contentLength] autorelease]];
+    [buffer appendString:[[[NSString alloc] initWithFormat:@"Headers: %@,", headers] autorelease]];
+    [buffer appendString:[[[NSString alloc] initWithFormat:@"Content-Length: %lld,", contentLength] autorelease]];
     [buffer appendString:[[[NSString alloc] initWithFormat:@"Connection-State: %@,", connectionState] autorelease]];
     [buffer appendString:[[[NSString alloc] initWithFormat:@"Date:: %@,", date] autorelease]];
     [buffer appendString:[[[NSString alloc] initWithFormat:@"ETag: %@,", etag] autorelease]];
@@ -193,10 +202,13 @@
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     NSDate   *startDate = [NSDate date];
-    NSString *tmp       = [[NSString alloc] initWithData:self.body encoding:NSUTF8StringEncoding];
-
-    AMZLogDebug(@"Response:\n%@", tmp);
-    [tmp release];
+    
+    if (![self isMemberOfClass:[S3GetObjectResponse class]]) {
+        NSString *tmp       = [[NSString alloc] initWithData:self.body encoding:NSUTF8StringEncoding];
+        
+        AMZLogDebug(@"Response:\n%@", tmp);
+        [tmp release];
+    }
 
     if (self.httpStatusCode >= 400) {
         NSXMLParser            *parser       = [[NSXMLParser alloc] initWithData:self.body];
@@ -205,9 +217,15 @@
         [parser parse];
 
         exception = [[errorHandler exception] copy];
+        BOOL throwsExceptions = [AmazonErrorHandler throwsExceptions];
 
-        if ([(NSObject *)self.request.delegate respondsToSelector:@selector(request:didFailWithServiceException:)]) {
+        if (throwsExceptions == YES
+            && [(NSObject *)self.request.delegate respondsToSelector:@selector(request:didFailWithServiceException:)]) {
             [self.request.delegate request:self.request didFailWithServiceException:(AmazonServiceException *)exception];
+        }
+        else if (throwsExceptions == NO
+                 && [(NSObject *)self.request.delegate respondsToSelector:@selector(request:didFailWithError:)]) {
+            [self.request.delegate request:self.request didFailWithError:[AmazonErrorHandler errorFromException:exception]];
         }
 
         [parser release];
@@ -226,18 +244,18 @@
 
 }
 
--(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+-(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)theError
 {
-    NSDictionary *info = [error userInfo];
+    NSDictionary *info = [theError userInfo];
     for (id key in info)
     {
         AMZLog(@"UserInfo.%@ = %@", [key description], [[info valueForKey:key] description]);
     }
-    exception = [[AmazonClientException exceptionWithMessage:[error description]] retain];
-    AMZLog(@"An error occured in the request: %@", [error description]);
+    exception = [[AmazonClientException exceptionWithMessage:[theError description]] retain];
+    AMZLog(@"An error occured in the request: %@", [theError description]);
 
     if ([(NSObject *)self.request.delegate respondsToSelector:@selector(request:didFailWithError:)]) {
-        [self.request.delegate request:self.request didFailWithError:error];
+        [self.request.delegate request:self.request didFailWithError:theError];
     }
 }
 

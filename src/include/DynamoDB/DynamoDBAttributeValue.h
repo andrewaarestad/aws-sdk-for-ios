@@ -13,13 +13,12 @@
  * permissions and limitations under the License.
  */
 
+#import "../AmazonSDKUtil.h"
 
 
 
 /**
  * Attribute Value
- *
- * \ingroup DynamoDB
  */
 
 @interface DynamoDBAttributeValue:NSObject
@@ -27,8 +26,10 @@
 {
     NSString       *s;
     NSString       *n;
+    NSData         *b;
     NSMutableArray *sS;
     NSMutableArray *nS;
+    NSMutableArray *bS;
 }
 
 
@@ -48,6 +49,11 @@
 @property (nonatomic, retain) NSString *n;
 
 /**
+ * Binary attributes are sequences of unsigned bytes.
+ */
+@property (nonatomic, retain) NSData *b;
+
+/**
  * A set of strings.
  */
 @property (nonatomic, retain) NSMutableArray *sS;
@@ -56,6 +62,11 @@
  * A set of numbers.
  */
 @property (nonatomic, retain) NSMutableArray *nS;
+
+/**
+ * A set of binary attributes.
+ */
+@property (nonatomic, retain) NSMutableArray *bS;
 
 
 /**
@@ -102,6 +113,22 @@
 -(id)initWithNS:(NSMutableArray *)theNS;
 
 /**
+ * Constructs a new AttributeValue object.
+ * Callers should use properties to initialize any additional object members.
+ *
+ * @param theB Binary attributes are sequences of unsigned bytes.
+ */
+-(id)initWithB:(NSData *)theB;
+
+/**
+ * Constructs a new AttributeValue object.
+ * Callers should use properties to initialize any additional object members.
+ *
+ * @param theBS A set of binary attributes.
+ */
+-(id)initWithBS:(NSMutableArray *)theBS;
+
+/**
  * Adds a single object to sS.
  * This function will alloc and init sS if not already done.
  */
@@ -112,6 +139,12 @@
  * This function will alloc and init nS if not already done.
  */
 -(void)addNS:(NSString *)nSObject;
+
+/**
+ * Adds a single object to bS.
+ * This function will alloc and init bS if not already done.
+ */
+-(void)addBS:(NSData *)bSObject;
 
 /**
  * Returns a string representation of this object; useful for testing and

@@ -18,6 +18,8 @@
 #import "DynamoDBRequest.h"
 #import "DynamoDBResponse.h"
 
+NSString *const AWSDefaultRunLoopMode = @"com.amazonaws.DefaultRunLoopMode";
+
 @implementation AmazonAbstractWebServiceClient
 
 @synthesize endpoint, maxRetries, timeout, userAgent, delay;
@@ -58,7 +60,11 @@
 -(AmazonServiceResponse *)invoke:(AmazonServiceRequest *)generatedRequest rawRequest:(AmazonServiceRequestConfig *)originalRequest unmarshallerDelegate:(Class)unmarshallerDelegate
 {
     if (nil == generatedRequest) {
-        @throw [AmazonClientException exceptionWithMessage : @"Request cannot be nil."];
+
+        AmazonServiceResponse *response = [[[AmazonServiceResponse alloc] init] autorelease];
+        response.error = [AmazonErrorHandler errorFromExceptionWithThrowsExceptionOption:[AmazonClientException 
+                                                                 exceptionWithMessage:@"Request cannot be nil."]];
+        return response;
     }
 
     [generatedRequest setUserAgent:self.userAgent];
@@ -69,13 +75,6 @@
     if (nil == generatedRequest.credentials) {
         [generatedRequest setCredentials:credentials];
     }
-
-
-#ifdef GHUNIT_CLI
-    if ( [generatedRequest.endpoint hasPrefix:@"https://"]) {
-        generatedRequest.endpoint = [generatedRequest.endpoint stringByReplacingOccurrencesOfString:@"https://" withString:@"http://"];
-    }
-#endif
 
     NSMutableURLRequest *urlRequest = [generatedRequest configureURLRequest];
     [generatedRequest sign];
@@ -88,7 +87,7 @@
     [rBody release];
 
     AmazonServiceResponse *response = nil;
-    int                   retries   = 0;
+    NSInteger             retries   = 0;
     while (retries < self.maxRetries) {
         AMZLogDebug(@"Begin Request: %@:%d", NSStringFromClass([generatedRequest class]), retries);
 
@@ -101,53 +100,98 @@
         // Setting this here and not the AmazonServiceRequest because S3 extends that class and sets its own Content-Type Header.
         [urlRequest addValue:@"application/x-www-form-urlencoded; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
 
-        NSURLConnection *urlConnection = [NSURLConnection connectionWithRequest:urlRequest delegate:response];
+        if ([generatedRequest delegate] != nil) {
+
+            NSURLConnection *urlConnection = [[[NSURLConnection alloc] initWithRequest:urlRequest
+                                                                              delegate:response
+                                                                      startImmediately:NO] autorelease];
+            originalRequest.urlConnection = urlConnection;
+            [urlConnection start];
+            
+            [NSTimer scheduledTimerWithTimeInterval:self.timeout target:response selector:@selector(timeout) userInfo:nil repeats:NO];
+
+            return nil;
+        }
+
+        generatedRequest.delegate = [[[AmazonRequestDelegate alloc] init] autorelease];
+
+        NSURLConnection *urlConnection = [[[NSURLConnection alloc] initWithRequest:urlRequest
+                                                                          delegate:response
+                                                                  startImmediately:NO] autorelease];
+        [urlConnection scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:AWSDefaultRunLoopMode];
         originalRequest.urlConnection = urlConnection;
+        [urlConnection start];
 
-        if ([generatedRequest delegate] == nil) {
-            NSTimer *timeoutTimer = [NSTimer scheduledTimerWithTimeInterval:self.timeout target:response selector:@selector(timeout) userInfo:nil repeats:NO];
-            generatedRequest.delegate = [[[AmazonRequestDelegate alloc] init] autorelease];
+        NSTimer *timeoutTimer = [NSTimer timerWithTimeInterval:self.timeout
+                                                        target:response
+                                                      selector:@selector(timeout)
+                                                      userInfo:nil
+                                                       repeats:NO];
+        [[NSRunLoop currentRunLoop] addTimer:timeoutTimer forMode:AWSDefaultRunLoopMode];
 
-            while (![(AmazonRequestDelegate *)(generatedRequest.delegate)isFinishedOrFailed]) {
-                [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
-            }
+        while (![(AmazonRequestDelegate *)(generatedRequest.delegate)isFinishedOrFailed]) {
+            [[NSRunLoop currentRunLoop] runMode:AWSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+        }
 
-            if (response.didTimeout) {
-                [urlConnection cancel];
-            }
-            else {
-                [timeoutTimer invalidate];     //  invalidate also releases the object.
-            }
-
-            AMZLogDebug(@"Response Status Code : %d", response.httpStatusCode);
-            if ( [self shouldRetry:response]) {
-                AMZLog(@"Retring Request: %d", retries);
-                generatedRequest.delegate = nil;
-
-                [self pauseExponentially:retries];
-                retries++;
-            }
-            else {
-                break;
-            }
+        if (response.didTimeout) {
+            [urlConnection cancel];
         }
         else {
-            return nil;
+            [timeoutTimer invalidate];     //  invalidate also releases the object.
+        }
+
+        AMZLogDebug(@"Response Status Code : %d", response.httpStatusCode);
+        if ( [self shouldRetry:response]) {
+            AMZLog(@"Retring Request: %d", retries);
+            generatedRequest.delegate = nil;
+
+            [self pauseExponentially:retries];
+            retries++;
+        }
+        else {
+            break;
         }
     }
 
     if (response.exception != nil) {
-        @throw response.exception;
+        
+        response.error = [AmazonErrorHandler errorFromExceptionWithThrowsExceptionOption:response.exception];
+        return response;
     }
     else {
-        if (((AmazonRequestDelegate *)generatedRequest.delegate).exception != nil) {
-            @throw((AmazonRequestDelegate *)generatedRequest.delegate).exception;
+        if (((AmazonRequestDelegate *)generatedRequest.delegate).error != nil) {
+            
+            if(response == nil)
+            {
+                response = [[[AmazonServiceResponse alloc] init] autorelease];
+            }
+            response.error = ((AmazonRequestDelegate *)generatedRequest.delegate).error;
+            
+            return response;
         }
-        else if (((AmazonRequestDelegate *)generatedRequest.delegate).response != nil) {
+        else if (((AmazonRequestDelegate *)generatedRequest.delegate).exception != nil) {
+            
+            if(response == nil)
+            {
+                response = [[[AmazonServiceResponse alloc] init] autorelease];
+            }
+            response.error = [AmazonErrorHandler errorFromExceptionWithThrowsExceptionOption:((AmazonRequestDelegate *)generatedRequest.delegate).exception];
+            
+            return response;
+        }
+        else if (((AmazonRequestDelegate *)generatedRequest.delegate).response != nil)
+        {
             return ((AmazonRequestDelegate *)generatedRequest.delegate).response;
         }
-        else {
-            return nil; //TODO: Throw an exception here AmazonClientException
+        else
+        {
+            if(response == nil)
+            {
+                response = [[[AmazonServiceResponse alloc] init] autorelease];
+            }
+            AmazonClientException *clientException = [AmazonClientException exceptionWithMessage:@"Unknown error occurred."];
+            response.error = [AmazonErrorHandler errorFromExceptionWithThrowsExceptionOption:clientException];
+            return response;
         }
     }
 }
@@ -186,7 +230,7 @@
     return NO;
 }
 
--(void)pauseExponentially:(int)tryCount
+-(void)pauseExponentially:(NSInteger)tryCount
 {
     NSTimeInterval pause = self.delay * (pow(2, tryCount));
 
@@ -196,6 +240,19 @@
 -(void)setUserAgent:(NSString *)newUserAgent
 {
     userAgent = [[NSString stringWithFormat:@"%@, %@", newUserAgent, [AmazonSDKUtil userAgentString]] retain];
+}
+
+-(NSString *)userAgent
+{
+    if([AmazonErrorHandler throwsExceptions] == YES)
+    {
+        return userAgent;
+    }
+    else
+    {
+        // When NSError error handling is enabled, add NE at the end of userAgent.
+        return [NSString stringWithFormat:@"%@ NE", userAgent];
+    }
 }
 
 -(void)dealloc

@@ -21,8 +21,6 @@
 
 /**
  * List Verified Email Addresses Result
- *
- * \ingroup SES
  */
 
 @interface SESListVerifiedEmailAddressesResponse:SESResponse
@@ -43,7 +41,7 @@
 -(id)init;
 
 /**
- * The value of the VerifiedEmailAddresses property for this object.
+ * A list of email addresses that have been verified.
  */
 @property (nonatomic, retain) NSMutableArray *verifiedEmailAddresses;
 

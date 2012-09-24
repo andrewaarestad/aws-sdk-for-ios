@@ -18,7 +18,6 @@
 
 /** The S3ListPartsResult contains all the information about the listParts method.
  *
- * \ingroup s3
  */
 @interface S3ListPartsResult:NSObject {
     NSString       *bucket;
@@ -29,9 +28,9 @@
     S3Owner        *owner;
     S3Owner        *initiator;
 
-    int            partNumberMarker;
-    int            nextPartNumberMarker;
-    int            maxParts;
+    NSInteger      partNumberMarker;
+    NSInteger      nextPartNumberMarker;
+    NSInteger      maxParts;
 
     bool           isTruncated;
 

@@ -37,13 +37,13 @@
     return self;
 }
 
--(void)setExpires:(int)exp
+-(void)setExpires:(NSInteger)exp
 {
     expires    = exp;
     expiresSet = YES;
 }
 
--(int)expires
+-(NSInteger)expires
 {
     return expires;
 }
@@ -106,9 +106,11 @@
 
 -(id)initWithKey:(NSString *)aKey inBucket:(NSString *)aBucket
 {
-    [self init];
-    self.key    = aKey;
-    self.bucket = aBucket;
+    if(self = [self init])
+    {
+        self.key    = aKey;
+        self.bucket = aBucket;
+    }
 
     return self;
 }
@@ -121,29 +123,44 @@
     }
 
     filename = [theFilename retain];
-
-    if (![[NSFileManager defaultManager] isReadableFileAtPath:self.filename]) {
-        @throw [AmazonClientException exceptionWithMessage : @"The specified file cannot be read."];
-    }
-
-    self.contentLength = [[[[NSFileManager defaultManager] attributesOfItemAtPath:self.filename error:nil] valueForKey:NSFileSize] intValue];
-    self.contentType   = [AmazonSDKUtil MIMETypeForExtension:[self.filename pathExtension]];
-
-    @try {
-        if (stream != nil) {
-            [stream release];
-            stream = nil;
-        }
-        stream = [[NSInputStream alloc] initWithFileAtPath:filename];
-    }
-    @catch (NSException *e) {
-        @throw [AmazonClientException exceptionWithMessage :[NSString stringWithFormat:@"Could not open file for streaming: ", e.reason]];
-    }
 }
 
 -(NSString *)filename
 {
     return filename;
+}
+
+- (AmazonClientException *)validate
+{
+    AmazonClientException *clientException = [super validate];
+    
+    if(clientException == nil)
+    {
+        if(self.filename != nil)
+        {
+            if (![[NSFileManager defaultManager] isReadableFileAtPath:self.filename]) {
+                
+                clientException = [AmazonClientException exceptionWithMessage:@"The specified file cannot be read."];
+            }
+            else {
+                self.contentLength = [[[[NSFileManager defaultManager] attributesOfItemAtPath:self.filename 
+                                                                                                    error:nil] 
+                                                   valueForKey:NSFileSize] intValue];
+                self.contentType   = [AmazonSDKUtil MIMETypeForExtension:[self.filename pathExtension]];
+                
+                @try {
+                    self.stream = [[NSInputStream alloc] initWithFileAtPath:self.filename];
+                }
+                @catch (NSException *e) {
+                    
+                    clientException = [AmazonClientException exceptionWithMessage:
+                                       [NSString stringWithFormat:@"Could not open file for streaming: %@", e.reason]];
+                }
+            }
+        }
+    }
+    
+    return clientException;
 }
 
 #ifdef DEBUG

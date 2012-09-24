@@ -16,6 +16,7 @@
 
 #import "DynamoDBPutItemRequestMarshaller.h"
 #import "AmazonJSON.h"
+#import "../AmazonSDKUtil.h"
 
 @implementation DynamoDBPutItemRequestMarshaller
 
@@ -42,11 +43,9 @@
         NSMutableDictionary *itemJson = [[[NSMutableDictionary alloc] init] autorelease];
         [json setValue:itemJson forKey:@"Item"];
         for (NSString *itemListValue in putItemRequest.item) {
-            NSMutableDictionary *itemListValueJson = [[[NSMutableDictionary alloc] init] autorelease];
+            NSMutableDictionary    *itemListValueJson = [[[NSMutableDictionary alloc] init] autorelease];
             [itemJson setValue:itemListValueJson forKey:itemListValue];
-
             DynamoDBAttributeValue *itemListValueValue = [putItemRequest.item valueForKey:itemListValue];
-
 
             if (itemListValueValue.s != nil) {
                 [itemListValueJson setValue:itemListValueValue.s forKey:@"S"];
@@ -54,6 +53,10 @@
 
             if (itemListValueValue.n != nil) {
                 [itemListValueJson setValue:itemListValueValue.n forKey:@"N"];
+            }
+
+            if (itemListValueValue.b != nil) {
+                [itemListValueJson setValue:[itemListValueValue.b base64EncodedString] forKey:@"B"];
             }
             if (itemListValueValue != nil) {
                 NSArray *sSList = itemListValueValue.sS;
@@ -79,17 +82,27 @@
                     }
                 }
             }
+            if (itemListValueValue != nil) {
+                NSArray *bSList = itemListValueValue.bS;
+                if (bSList != nil && [bSList count] > 0) {
+                    NSMutableArray *bSArray = [[[NSMutableArray alloc] init] autorelease];
+                    [itemListValueJson setValue:bSArray forKey:@"BS"];
+                    for (NSData *bSListValue in bSList) {
+                        if (bSListValue != nil) {
+                            [bSArray addObject:[bSListValue base64EncodedString]];
+                        }
+                    }
+                }
+            }
         }
     }
     if (putItemRequest.expected != nil) {
         NSMutableDictionary *expectedJson = [[[NSMutableDictionary alloc] init] autorelease];
         [json setValue:expectedJson forKey:@"Expected"];
         for (NSString *expectedListValue in putItemRequest.expected) {
-            NSMutableDictionary *expectedListValueJson = [[[NSMutableDictionary alloc] init] autorelease];
+            NSMutableDictionary            *expectedListValueJson = [[[NSMutableDictionary alloc] init] autorelease];
             [expectedJson setValue:expectedListValueJson forKey:expectedListValue];
-
             DynamoDBExpectedAttributeValue *expectedListValueValue = [putItemRequest.expected valueForKey:expectedListValue];
-
             if (expectedListValueValue != nil) {
                 DynamoDBAttributeValue *value = expectedListValueValue.value;
                 if (value != nil) {
@@ -103,6 +116,10 @@
 
                     if (value.n != nil) {
                         [valueJson setValue:value.n forKey:@"N"];
+                    }
+
+                    if (value.b != nil) {
+                        [valueJson setValue:[value.b base64EncodedString] forKey:@"B"];
                     }
                     if (value != nil) {
                         NSArray *sSList = value.sS;
@@ -128,6 +145,18 @@
                             }
                         }
                     }
+                    if (value != nil) {
+                        NSArray *bSList = value.bS;
+                        if (bSList != nil && [bSList count] > 0) {
+                            NSMutableArray *bSArray = [[[NSMutableArray alloc] init] autorelease];
+                            [valueJson setValue:bSArray forKey:@"BS"];
+                            for (NSData *bSListValue in bSList) {
+                                if (bSListValue != nil) {
+                                    [bSArray addObject:[bSListValue base64EncodedString]];
+                                }
+                            }
+                        }
+                    }
                 }
             }
 
@@ -144,7 +173,7 @@
 
 
     request.content = [AmazonJSON JSONRepresentation:json];
-    [request addValue:[NSString stringWithFormat:@"%d", [request.content length]]    forHeader:@"Content-Length"];
+    [request addValue:[NSString stringWithFormat:@"%d", [[request.content dataUsingEncoding:NSUTF8StringEncoding] length]]    forHeader:@"Content-Length"];
 
     return [request autorelease];
 }

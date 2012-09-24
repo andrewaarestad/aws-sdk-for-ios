@@ -68,7 +68,7 @@
 
     NSArray         *keys       = [[self parameters] allKeys];
     NSArray         *sortedKeys = [keys sortedArrayUsingSelector:@selector(compare:)];
-    for (int index = 0; index < [sortedKeys count]; index++) {
+    for (NSInteger index = 0; index < [sortedKeys count]; index++) {
         NSString *key   = [sortedKeys objectAtIndex:index];
         NSString *value = (NSString *)[[self parameters] valueForKey:key];
 
@@ -100,7 +100,13 @@
     
     NSRange startOfHost = [self.endpoint rangeOfString:@"://"];
     
-    return [self.endpoint substringFromIndex:(startOfHost.location + 3)];
+    NSString *trimmed = [self.endpoint substringFromIndex:(startOfHost.location + 3)];
+    NSRange endOfHost = [trimmed rangeOfString:@"/"];
+    if (endOfHost.location == NSNotFound) {
+        return trimmed;
+    }
+
+    return [trimmed substringToIndex:(endOfHost.location)];
 }
 
 -(void)setRegionName:(NSString *)theRegionName 
@@ -158,6 +164,7 @@
     if (serviceName != nil) {
         return serviceName;
     }
+    
     // If we don't recognize the domain, just return nil
     if (![self.hostName hasSuffix:@".amazonaws.com"]) {
         return nil;
@@ -172,7 +179,7 @@
         }
         
         if ( [serviceAndRegion rangeOfString:separator].location == NSNotFound) {
-            return @"nil";
+            return serviceAndRegion;
         }
         
         NSRange index = [serviceAndRegion rangeOfString:separator];
@@ -220,6 +227,11 @@
 -(id<AmazonServiceRequestDelegate> )delegate
 {
     return delegate;
+}
+
+- (AmazonClientException *)validate
+{
+    return nil;
 }
 
 -(void)dealloc

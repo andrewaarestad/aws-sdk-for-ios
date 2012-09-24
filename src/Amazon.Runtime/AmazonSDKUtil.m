@@ -50,7 +50,7 @@ static const short base64DecodingTable[] =
     NSString *sv  = [[NSProcessInfo processInfo] operatingSystemVersionString];    
 #endif
     NSString *loc = [[NSLocale currentLocale] localeIdentifier];
-    NSString *ua  = [NSString stringWithFormat: [NSString stringWithString:AWS_SDK_USER_AGENT_FORMAT], [NSString stringWithString:AWS_SDK_VERSION], sn, sv, loc];
+    NSString *ua  = [NSString stringWithFormat:AWS_SDK_USER_AGENT_FORMAT, AWS_SDK_VERSION, sn, sv, loc];
 
     return ua;
 }
@@ -67,7 +67,7 @@ static const short base64DecodingTable[] =
     NSMutableData *stringData = [[[NSMutableData alloc] init] autorelease];
     unsigned char whole_byte;
     char          byte_chars[3] = { '\0', '\0', '\0' };
-    int           i;
+    NSInteger     i;
     for (i = 0; i < [hexString length] / 2; i++) {
         byte_chars[0] = [hexString characterAtIndex:i * 2];
         byte_chars[1] = [hexString characterAtIndex:i * 2 + 1];
@@ -282,6 +282,7 @@ static const short base64DecodingTable[] =
                        @"video/x-m4v", @"m4v",
                        @"video/webm", @"webm",
                        @"video/ogv", @"ogv",
+                       @"audio/mp4a-latm", @"m4a",
                        nil];
     }
     extension = [extension lowercaseString];
@@ -313,7 +314,12 @@ static const short base64DecodingTable[] =
 
 +(NSDate *)millisSinceEpochToDate:(NSNumber *)millisSinceEpoch
 {
-    return [NSDate dateWithTimeIntervalSince1970:([millisSinceEpoch longLongValue] / 1000)];
+    return [NSDate dateWithTimeIntervalSince1970:([millisSinceEpoch doubleValue] / 1000)];
+}
+
++(NSDate *)secondsSinceEpochToDate:(NSNumber *)secondsSinceEpoch
+{
+    return [NSDate dateWithTimeIntervalSince1970:[secondsSinceEpoch doubleValue]];
 }
 
 +(NSDate *)convertStringToDate:(NSString *)string usingFormat:(NSString *)dateFormat
@@ -333,7 +339,9 @@ static const short base64DecodingTable[] =
 
 +(NSURL *)URLWithURL:(NSURL *)theURL andProtocol:(NSString *)theProtocol
 {
-    if (!([theProtocol isEqualToString:@"http"] || [theProtocol isEqualToString:@"https"])) {
+    if (!([theProtocol isEqualToString:@"http"] || [theProtocol isEqualToString:@"https"]))
+    {
+        // Fatal error. This should not happen.
         @throw [AmazonClientException exceptionWithMessage : @"protocol must be 'http' or 'https'."];
     }
 
@@ -419,6 +427,7 @@ static const short base64DecodingTable[] =
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 
+    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
     [dateFormatter setDateFormat:kISO8061DateFormat];
     [dateFormatter setLocale:[AmazonSDKUtil timestampLocale]];
 
@@ -552,14 +561,14 @@ static const short base64DecodingTable[] =
     const char    *inputPtr;
     unsigned char *buffer;
 
-    int           length;
+    NSInteger     length;
 
     inputPtr = [encodedString cStringUsingEncoding:NSASCIIStringEncoding];
     length   = strlen(inputPtr);
     char ch;
-    int  inputIdx = 0, outputIdx = 0, padIdx;
+    NSInteger inputIdx = 0, outputIdx = 0, padIdx;
 
-    buffer = calloc(length, sizeof(char));
+    buffer = calloc(length, sizeof(unsigned char));
 
     while (((ch = *inputPtr++) != '\0') && (length-- > 0)) {
         if (ch == '=') {

@@ -16,6 +16,7 @@
 
 #import "DynamoDBUpdateItemRequestMarshaller.h"
 #import "AmazonJSON.h"
+#import "../AmazonSDKUtil.h"
 
 @implementation DynamoDBUpdateItemRequestMarshaller
 
@@ -58,6 +59,10 @@
                     if (hashKeyElement.n != nil) {
                         [hashKeyElementJson setValue:hashKeyElement.n forKey:@"N"];
                     }
+
+                    if (hashKeyElement.b != nil) {
+                        [hashKeyElementJson setValue:[hashKeyElement.b base64EncodedString] forKey:@"B"];
+                    }
                     if (hashKeyElement != nil) {
                         NSArray *sSList = hashKeyElement.sS;
                         if (sSList != nil && [sSList count] > 0) {
@@ -82,6 +87,18 @@
                             }
                         }
                     }
+                    if (hashKeyElement != nil) {
+                        NSArray *bSList = hashKeyElement.bS;
+                        if (bSList != nil && [bSList count] > 0) {
+                            NSMutableArray *bSArray = [[[NSMutableArray alloc] init] autorelease];
+                            [hashKeyElementJson setValue:bSArray forKey:@"BS"];
+                            for (NSData *bSListValue in bSList) {
+                                if (bSListValue != nil) {
+                                    [bSArray addObject:[bSListValue base64EncodedString]];
+                                }
+                            }
+                        }
+                    }
                 }
             }
             if (key != nil) {
@@ -97,6 +114,10 @@
 
                     if (rangeKeyElement.n != nil) {
                         [rangeKeyElementJson setValue:rangeKeyElement.n forKey:@"N"];
+                    }
+
+                    if (rangeKeyElement.b != nil) {
+                        [rangeKeyElementJson setValue:[rangeKeyElement.b base64EncodedString] forKey:@"B"];
                     }
                     if (rangeKeyElement != nil) {
                         NSArray *sSList = rangeKeyElement.sS;
@@ -122,6 +143,18 @@
                             }
                         }
                     }
+                    if (rangeKeyElement != nil) {
+                        NSArray *bSList = rangeKeyElement.bS;
+                        if (bSList != nil && [bSList count] > 0) {
+                            NSMutableArray *bSArray = [[[NSMutableArray alloc] init] autorelease];
+                            [rangeKeyElementJson setValue:bSArray forKey:@"BS"];
+                            for (NSData *bSListValue in bSList) {
+                                if (bSListValue != nil) {
+                                    [bSArray addObject:[bSListValue base64EncodedString]];
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -130,11 +163,9 @@
         NSMutableDictionary *attributeUpdatesJson = [[[NSMutableDictionary alloc] init] autorelease];
         [json setValue:attributeUpdatesJson forKey:@"AttributeUpdates"];
         for (NSString *attributeUpdatesListValue in updateItemRequest.attributeUpdates) {
-            NSMutableDictionary *attributeUpdatesListValueJson = [[[NSMutableDictionary alloc] init] autorelease];
+            NSMutableDictionary          *attributeUpdatesListValueJson = [[[NSMutableDictionary alloc] init] autorelease];
             [attributeUpdatesJson setValue:attributeUpdatesListValueJson forKey:attributeUpdatesListValue];
-
             DynamoDBAttributeValueUpdate *attributeUpdatesListValueValue = [updateItemRequest.attributeUpdates valueForKey:attributeUpdatesListValue];
-
             if (attributeUpdatesListValueValue != nil) {
                 DynamoDBAttributeValue *value = attributeUpdatesListValueValue.value;
                 if (value != nil) {
@@ -148,6 +179,10 @@
 
                     if (value.n != nil) {
                         [valueJson setValue:value.n forKey:@"N"];
+                    }
+
+                    if (value.b != nil) {
+                        [valueJson setValue:[value.b base64EncodedString] forKey:@"B"];
                     }
                     if (value != nil) {
                         NSArray *sSList = value.sS;
@@ -169,6 +204,18 @@
                             for (NSString *nSListValue in nSList) {
                                 if (nSListValue != nil) {
                                     [nSArray addObject:nSListValue];
+                                }
+                            }
+                        }
+                    }
+                    if (value != nil) {
+                        NSArray *bSList = value.bS;
+                        if (bSList != nil && [bSList count] > 0) {
+                            NSMutableArray *bSArray = [[[NSMutableArray alloc] init] autorelease];
+                            [valueJson setValue:bSArray forKey:@"BS"];
+                            for (NSData *bSListValue in bSList) {
+                                if (bSListValue != nil) {
+                                    [bSArray addObject:[bSListValue base64EncodedString]];
                                 }
                             }
                         }
@@ -185,11 +232,9 @@
         NSMutableDictionary *expectedJson = [[[NSMutableDictionary alloc] init] autorelease];
         [json setValue:expectedJson forKey:@"Expected"];
         for (NSString *expectedListValue in updateItemRequest.expected) {
-            NSMutableDictionary *expectedListValueJson = [[[NSMutableDictionary alloc] init] autorelease];
+            NSMutableDictionary            *expectedListValueJson = [[[NSMutableDictionary alloc] init] autorelease];
             [expectedJson setValue:expectedListValueJson forKey:expectedListValue];
-
             DynamoDBExpectedAttributeValue *expectedListValueValue = [updateItemRequest.expected valueForKey:expectedListValue];
-
             if (expectedListValueValue != nil) {
                 DynamoDBAttributeValue *value = expectedListValueValue.value;
                 if (value != nil) {
@@ -203,6 +248,10 @@
 
                     if (value.n != nil) {
                         [valueJson setValue:value.n forKey:@"N"];
+                    }
+
+                    if (value.b != nil) {
+                        [valueJson setValue:[value.b base64EncodedString] forKey:@"B"];
                     }
                     if (value != nil) {
                         NSArray *sSList = value.sS;
@@ -224,6 +273,18 @@
                             for (NSString *nSListValue in nSList) {
                                 if (nSListValue != nil) {
                                     [nSArray addObject:nSListValue];
+                                }
+                            }
+                        }
+                    }
+                    if (value != nil) {
+                        NSArray *bSList = value.bS;
+                        if (bSList != nil && [bSList count] > 0) {
+                            NSMutableArray *bSArray = [[[NSMutableArray alloc] init] autorelease];
+                            [valueJson setValue:bSArray forKey:@"BS"];
+                            for (NSData *bSListValue in bSList) {
+                                if (bSListValue != nil) {
+                                    [bSArray addObject:[bSListValue base64EncodedString]];
                                 }
                             }
                         }
@@ -244,7 +305,7 @@
 
 
     request.content = [AmazonJSON JSONRepresentation:json];
-    [request addValue:[NSString stringWithFormat:@"%d", [request.content length]]    forHeader:@"Content-Length"];
+    [request addValue:[NSString stringWithFormat:@"%d", [[request.content dataUsingEncoding:NSUTF8StringEncoding] length]]    forHeader:@"Content-Length"];
 
     return [request autorelease];
 }

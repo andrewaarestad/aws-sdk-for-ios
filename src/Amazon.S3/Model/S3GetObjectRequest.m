@@ -91,21 +91,37 @@
 -(NSString *)getRange
 {
     if (rangeSet) {
-        return [NSString stringWithFormat:@"bytes=%d-%d", rangeStart, rangeEnd];
+        return [NSString stringWithFormat:@"bytes=%lld-%lld", rangeStart, rangeEnd];
     }
 
     return nil;
 }
 
--(void)setRangeStart:(int)start rangeEnd:(int)end
+-(void)setRangeStart:(int64_t)start rangeEnd:(int64_t)end
 {
-    if (end <= start) {
-        @throw [AmazonClientException exceptionWithName : @"Invalid range" reason : @"rangeEnd must be larger than rangeStart" userInfo : nil];
-    }
-
     rangeStart = start;
     rangeEnd   = end;
     rangeSet   = YES;
+}
+
+- (AmazonClientException *)validate
+{
+    AmazonClientException *clientException = [super validate];
+    
+    if(clientException == nil)
+    {
+        if(rangeSet == YES)
+        {
+            if (rangeEnd <= rangeStart) {
+                clientException = (AmazonClientException *)[AmazonClientException exceptionWithName:@"Invalid range" 
+                                                                    reason:@"rangeEnd must be larger than rangeStart" 
+                                                                  userInfo:nil];
+                rangeSet = NO;
+            }
+        }
+    }
+    
+    return clientException;
 }
 
 -(void) dealloc

@@ -22,8 +22,6 @@
 
 /**
  * Get Send Statistics Result
- *
- * \ingroup SES
  */
 
 @interface SESGetSendStatisticsResponse:SESResponse
@@ -44,7 +42,8 @@
 -(id)init;
 
 /**
- * The value of the SendDataPoints property for this object.
+ * A list of data points, each of which represents 15 minutes of
+ * activity.
  */
 @property (nonatomic, retain) NSMutableArray *sendDataPoints;
 

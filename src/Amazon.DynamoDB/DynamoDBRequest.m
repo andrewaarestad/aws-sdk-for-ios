@@ -25,21 +25,10 @@
     [self.urlRequest setHTTPMethod:@"POST"];
 
     [self addValue:self.hostName forHeader:@"Host"];
-#ifdef SIGV4
-    // TODO: Change when Dynamo changes
-    self.serviceName = @"dynamodb";
     if (self.credentials.securityToken != nil) {
         [self addValue:self.credentials.securityToken forHeader:@"x-amz-security-token"];
     }
-    NSString *authorizaiton = [AmazonAuthUtils signRequestV4:self headers:headers payload:self.content credentials:self.credentials];
-    [self addValue:authorizaiton     forHeader:@"Authorization"];
-#else
-    NSString *rfc822Date = [[NSDate date] stringWithRFC822Format];
-    [self addValue:rfc822Date forHeader:@"Date"];
-    [self addValue:rfc822Date forHeader:@"X-Amz-Date"];
-    [self addValue:self.credentials.securityToken forHeader:@"x-amz-security-token"];
-    [self addValue:[self generateAuthorization3]     forHeader:@"X-Amzn-Authorization"];
-#endif
+    [AmazonAuthUtils signRequestV4:self headers:headers payload:self.content credentials:self.credentials];
     [self addValue:self.userAgent forHeader:@"User-Agent"];
     for (NSString *header in headers) {
         [self.urlRequest setValue:[headers valueForKey:header] forHTTPHeaderField:header];

@@ -18,14 +18,13 @@
 
 /** Contains the parameters used for the initiateMultipartUpload operation.
  *
- * \ingroup S3
  */
 @interface S3InitiateMultipartUploadRequest:S3AbstractPutRequest {
-    NSString *cacheControl;
-    NSString *contentDisposition;
-    NSString *contentEncoding;
-    int      expires;
-    bool     expiresSet;
+    NSString  *cacheControl;
+    NSString  *contentDisposition;
+    NSString  *contentEncoding;
+    NSInteger expires;
+    bool      expiresSet;
 }
 
 -(id)initWithKey:(NSString *)aKey inBucket:(NSString *)aBucket;

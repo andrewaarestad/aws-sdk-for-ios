@@ -24,7 +24,6 @@
  *
  * Required parameters: bucket, key.
  *
- * \ingroup S3
  */
 @interface S3PutObjectRequest:S3AbstractPutRequest {
     NSString      *cacheControl;
@@ -37,7 +36,7 @@
 
     NSInputStream *stream;
 
-    int           expires;
+    NSInteger     expires;
     bool          expiresSet;
     bool          generateMD5;
 }
@@ -84,6 +83,7 @@
 @property (nonatomic, retain) NSData *data;
 
 /** The stream from which to read the object to be uploaded.
+ * To use the stream you must explicitly set the content length.
  * <p>
  * Use one of <code>data</code>, <code>stream</code>, <code>filename</code>.
  * </p>

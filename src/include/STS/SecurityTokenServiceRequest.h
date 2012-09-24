@@ -16,8 +16,14 @@
 #import <Foundation/Foundation.h>
 #import "../AmazonServiceRequest.h"
 
+/**
+ *
+ */
 @interface SecurityTokenServiceRequest:AmazonServiceRequest
 {
 }
+
+// override super (for V4)
+-(void)sign;
 
 @end

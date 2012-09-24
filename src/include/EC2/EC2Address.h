@@ -18,8 +18,6 @@
 
 /**
  * Address
- *
- * \ingroup EC2
  */
 
 @interface EC2Address:NSObject
@@ -32,6 +30,7 @@
     NSString *domain;
     NSString *networkInterfaceId;
     NSString *networkInterfaceOwnerId;
+    NSString *privateIpAddress;
 }
 
 
@@ -80,6 +79,11 @@
  * The value of the NetworkInterfaceOwnerId property for this object.
  */
 @property (nonatomic, retain) NSString *networkInterfaceOwnerId;
+
+/**
+ * The value of the PrivateIpAddress property for this object.
+ */
+@property (nonatomic, retain) NSString *privateIpAddress;
 
 /**
  * Returns a string representation of this object; useful for testing and

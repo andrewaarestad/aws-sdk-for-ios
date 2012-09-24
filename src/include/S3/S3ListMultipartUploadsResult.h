@@ -16,7 +16,6 @@
 #import <Foundation/Foundation.h>
 
 /** Contains all the information about the listMultipartUploads method.
- * \ingroup s3
  */
 @interface S3ListMultipartUploadsResult:NSObject {
     NSString       *bucket;
@@ -31,7 +30,7 @@
     NSMutableArray *uploads;
 
     bool           isTruncated;
-    int            maxUploads;
+    NSInteger      maxUploads;
 }
 
 
@@ -63,7 +62,7 @@
 @property (nonatomic, readonly) NSMutableArray *uploads;
 
 /** The maxUploads that was specified in the request. */
-@property (nonatomic) int maxUploads;
+@property (nonatomic) NSInteger maxUploads;
 
 /** Indicates whether the returned list of multipart uploads is truncated. */
 @property (nonatomic) bool isTruncated;

@@ -19,16 +19,15 @@
 
 /** Contains the parameters used for the listMultipartUploads operation.
  *
- * \ingroup S3
  */
 @interface S3ListMultipartUploadsRequest:S3Request {
-    NSString *delimiter;
-    NSString *keyMarker;
-    NSString *prefix;
-    NSString *uploadIdMarker;
+    NSString  *delimiter;
+    NSString  *keyMarker;
+    NSString  *prefix;
+    NSString  *uploadIdMarker;
 
-    int      maxUploads;
-    bool     maxUploadsIsSet;
+    NSInteger maxUploads;
+    bool      maxUploadsIsSet;
 }
 
 
@@ -72,6 +71,6 @@
 @property (nonatomic, retain) NSString *uploadIdMarker;
 
 /** Gets and sets the maximum number of multipart uploads to return in the response. */
-@property (nonatomic) int maxUploads;
+@property (nonatomic) NSInteger maxUploads;
 
 @end

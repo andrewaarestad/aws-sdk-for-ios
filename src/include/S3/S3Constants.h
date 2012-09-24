@@ -55,6 +55,11 @@
 #define kHttpHdrAmzCopySourceIfModified      @"x-amz-copy-source-if-modified-since"
 #define kHttpHdrAmzCopySourceIfUnmodified    @"x-amz-copy-source-if-unmodified-since"
 #define kHttpHdrAmzServerSideEncryption      @"x-amz-server-side-encryption"
+#define kHttpHdrAmzGrantRead                 @"x-amz-grant-read"
+#define kHttpHdrAmzGrantWrite                @"x-amz-grant-write"
+#define kHttpHdrAmzGrantReadAcp              @"x-amz-grant-read-acp"
+#define kHttpHdrAmzGrantWriteAcp             @"x-amz-grant-write-acp"
+#define kHttpHdrAmzGrantFullControl          @"x-amz-grant-full-control"
 
 #define kS3DateFormat                        @"EEE, dd MMM yyyy HH:mm:ss z"
 
@@ -70,6 +75,7 @@
 #define kS3SubResourceDelete                 @"delete"
 #define kS3SubResourceWebsite                @"website"
 #define kS3SubResourceLifecycle              @"lifecycle"
+#define kS3SubResourceTagging                @"tagging"
 
 
 // pre-signed URL query string parameters
@@ -96,5 +102,7 @@
 // Server Side Encryption
 #define kS3ServerSideEnryptionAES256         @"AES256"
 
+// Put Speed
+#define kS3UploadInputStreamChunkSize	1024
 
 

@@ -23,10 +23,9 @@
 
 /** response headers that are common to Amazon S3 responses.
  *
- * \ingroup S3
  */
 @interface S3Response:AmazonServiceResponse {
-    int                 contentLength;
+    int64_t             contentLength;
     NSString            *connectionState;
     NSDate              *date;
     NSString            *etag;
@@ -73,7 +72,7 @@
 @property (nonatomic) bool deleteMarker;
 
 /** The length in bytes of the body in the response. */
-@property (nonatomic) int contentLength;
+@property (nonatomic) int64_t contentLength;
 
 /** Sets the value in the response corresponding to the HTTP header */
 -(void)setValue:(id)value forHTTPHeaderField:(NSString *)header;
