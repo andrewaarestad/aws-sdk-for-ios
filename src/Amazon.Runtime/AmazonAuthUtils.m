@@ -180,7 +180,7 @@
     const void    *cStr = [dataToHash bytes];
     unsigned char result[CC_SHA256_DIGEST_LENGTH];
 
-    CC_SHA256(cStr, [dataToHash length], result);
+    CC_SHA256(cStr, (int)[dataToHash length], result);
 
     return [[[NSData alloc] initWithBytes:result length:CC_SHA256_DIGEST_LENGTH] autorelease];
 }

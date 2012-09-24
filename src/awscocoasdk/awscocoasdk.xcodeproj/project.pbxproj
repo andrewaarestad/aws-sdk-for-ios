@@ -7,6 +7,204 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C26F6C01610FA6F003967DF /* AmazonErrorHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F6BF1610FA6F003967DF /* AmazonErrorHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F6C31610FD2D003967DF /* AmazonErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6C21610FD2D003967DF /* AmazonErrorHandler.m */; };
+		8C26F6CA1610FD82003967DF /* DynamoDBBatchWriteItemRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6C41610FD7B003967DF /* DynamoDBBatchWriteItemRequest.m */; };
+		8C26F6CB1610FD82003967DF /* DynamoDBBatchWriteItemRequestMarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6C51610FD7C003967DF /* DynamoDBBatchWriteItemRequestMarshaller.m */; };
+		8C26F6CC1610FD82003967DF /* DynamoDBBatchWriteItemResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6C61610FD7C003967DF /* DynamoDBBatchWriteItemResponse.m */; };
+		8C26F6CD1610FD82003967DF /* DynamoDBBatchWriteItemResponseUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6C71610FD7E003967DF /* DynamoDBBatchWriteItemResponseUnmarshaller.m */; };
+		8C26F6CE1610FD82003967DF /* DynamoDBBatchWriteResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6C81610FD80003967DF /* DynamoDBBatchWriteResponse.m */; };
+		8C26F6CF1610FD82003967DF /* DynamoDBBatchWriteResponseUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6C91610FD81003967DF /* DynamoDBBatchWriteResponseUnmarshaller.m */; };
+		8C26F6D61610FDAB003967DF /* DynamoDBBatchWriteItemRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F6D01610FDAB003967DF /* DynamoDBBatchWriteItemRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F6D71610FDAB003967DF /* DynamoDBBatchWriteItemRequestMarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F6D11610FDAB003967DF /* DynamoDBBatchWriteItemRequestMarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F6D81610FDAB003967DF /* DynamoDBBatchWriteItemResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F6D21610FDAB003967DF /* DynamoDBBatchWriteItemResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F6D91610FDAB003967DF /* DynamoDBBatchWriteItemResponseUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F6D31610FDAB003967DF /* DynamoDBBatchWriteItemResponseUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F6DA1610FDAB003967DF /* DynamoDBBatchWriteResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F6D41610FDAB003967DF /* DynamoDBBatchWriteResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F6DB1610FDAB003967DF /* DynamoDBBatchWriteResponseUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F6D51610FDAB003967DF /* DynamoDBBatchWriteResponseUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F6E21610FDFA003967DF /* DynamoDBDeleteRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F6DC1610FDFA003967DF /* DynamoDBDeleteRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F6E31610FDFA003967DF /* DynamoDBDeleteRequestUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F6DD1610FDFA003967DF /* DynamoDBDeleteRequestUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F6E41610FDFA003967DF /* DynamoDBPutRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F6DE1610FDFA003967DF /* DynamoDBPutRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F6E51610FDFA003967DF /* DynamoDBPutRequestUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F6DF1610FDFA003967DF /* DynamoDBPutRequestUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F6E61610FDFA003967DF /* DynamoDBWriteRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F6E01610FDFA003967DF /* DynamoDBWriteRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F6E71610FDFA003967DF /* DynamoDBWriteRequestUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F6E11610FDFA003967DF /* DynamoDBWriteRequestUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F6EE1610FE17003967DF /* DynamoDBDeleteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6E81610FE11003967DF /* DynamoDBDeleteRequest.m */; };
+		8C26F6EF1610FE17003967DF /* DynamoDBDeleteRequestUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6E91610FE12003967DF /* DynamoDBDeleteRequestUnmarshaller.m */; };
+		8C26F6F01610FE17003967DF /* DynamoDBPutRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6EA1610FE14003967DF /* DynamoDBPutRequest.m */; };
+		8C26F6F11610FE17003967DF /* DynamoDBPutRequestUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6EB1610FE15003967DF /* DynamoDBPutRequestUnmarshaller.m */; };
+		8C26F6F21610FE17003967DF /* DynamoDBWriteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6EC1610FE16003967DF /* DynamoDBWriteRequest.m */; };
+		8C26F6F31610FE17003967DF /* DynamoDBWriteRequestUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6ED1610FE17003967DF /* DynamoDBWriteRequestUnmarshaller.m */; };
+		8C26F70B1610FE6A003967DF /* EC2CancelExportTaskRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6F41610FE6A003967DF /* EC2CancelExportTaskRequest.m */; };
+		8C26F70C1610FE6A003967DF /* EC2CancelExportTaskRequestMarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6F51610FE6A003967DF /* EC2CancelExportTaskRequestMarshaller.m */; };
+		8C26F70D1610FE6A003967DF /* EC2CancelExportTaskResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6F61610FE6A003967DF /* EC2CancelExportTaskResponse.m */; };
+		8C26F70E1610FE6A003967DF /* EC2CancelExportTaskResponseUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6F71610FE6A003967DF /* EC2CancelExportTaskResponseUnmarshaller.m */; };
+		8C26F70F1610FE6A003967DF /* EC2CreateInstanceExportTaskRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6F81610FE6A003967DF /* EC2CreateInstanceExportTaskRequest.m */; };
+		8C26F7101610FE6A003967DF /* EC2CreateInstanceExportTaskRequestMarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6F91610FE6A003967DF /* EC2CreateInstanceExportTaskRequestMarshaller.m */; };
+		8C26F7111610FE6A003967DF /* EC2CreateInstanceExportTaskResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6FA1610FE6A003967DF /* EC2CreateInstanceExportTaskResponse.m */; };
+		8C26F7121610FE6A003967DF /* EC2CreateInstanceExportTaskResponseUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6FB1610FE6A003967DF /* EC2CreateInstanceExportTaskResponseUnmarshaller.m */; };
+		8C26F7131610FE6A003967DF /* EC2DescribeExportTasksResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6FC1610FE6A003967DF /* EC2DescribeExportTasksResponse.m */; };
+		8C26F7141610FE6A003967DF /* EC2DescribeExportTasksResponseUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6FD1610FE6A003967DF /* EC2DescribeExportTasksResponseUnmarshaller.m */; };
+		8C26F7151610FE6A003967DF /* EC2ExportTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6FE1610FE6A003967DF /* EC2ExportTask.m */; };
+		8C26F7161610FE6A003967DF /* EC2ExportTaskUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F6FF1610FE6A003967DF /* EC2ExportTaskUnmarshaller.m */; };
+		8C26F7171610FE6A003967DF /* EC2ExportToS3Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7001610FE6A003967DF /* EC2ExportToS3Task.m */; };
+		8C26F7181610FE6A003967DF /* EC2ExportToS3TaskSpecification.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7011610FE6A003967DF /* EC2ExportToS3TaskSpecification.m */; };
+		8C26F7191610FE6A003967DF /* EC2ExportToS3TaskUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7021610FE6A003967DF /* EC2ExportToS3TaskUnmarshaller.m */; };
+		8C26F71A1610FE6A003967DF /* EC2IamInstanceProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7031610FE6A003967DF /* EC2IamInstanceProfile.m */; };
+		8C26F71B1610FE6A003967DF /* EC2IamInstanceProfileSpecification.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7041610FE6A003967DF /* EC2IamInstanceProfileSpecification.m */; };
+		8C26F71C1610FE6A003967DF /* EC2IamInstanceProfileSpecificationUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7051610FE6A003967DF /* EC2IamInstanceProfileSpecificationUnmarshaller.m */; };
+		8C26F71D1610FE6A003967DF /* EC2IamInstanceProfileUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7061610FE6A003967DF /* EC2IamInstanceProfileUnmarshaller.m */; };
+		8C26F71E1610FE6A003967DF /* EC2InstanceExportDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7071610FE6A003967DF /* EC2InstanceExportDetails.m */; };
+		8C26F71F1610FE6A003967DF /* EC2InstanceExportDetailsUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7081610FE6A003967DF /* EC2InstanceExportDetailsUnmarshaller.m */; };
+		8C26F7201610FE6A003967DF /* EC2PrivateIpAddressSpecification.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7091610FE6A003967DF /* EC2PrivateIpAddressSpecification.m */; };
+		8C26F7211610FE6A003967DF /* EC2PrivateIpAddressSpecificationUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F70A1610FE6A003967DF /* EC2PrivateIpAddressSpecificationUnmarshaller.m */; };
+		8C26F73B1610FE9F003967DF /* EC2CancelExportTaskRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7221610FE9F003967DF /* EC2CancelExportTaskRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F73C1610FE9F003967DF /* EC2CancelExportTaskRequestMarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7231610FE9F003967DF /* EC2CancelExportTaskRequestMarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F73D1610FE9F003967DF /* EC2CancelExportTaskResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7241610FE9F003967DF /* EC2CancelExportTaskResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F73E1610FE9F003967DF /* EC2CancelExportTaskResponseUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7251610FE9F003967DF /* EC2CancelExportTaskResponseUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F73F1610FE9F003967DF /* EC2CreateInstanceExportTaskRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7261610FE9F003967DF /* EC2CreateInstanceExportTaskRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7401610FE9F003967DF /* EC2CreateInstanceExportTaskRequestMarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7271610FE9F003967DF /* EC2CreateInstanceExportTaskRequestMarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7411610FE9F003967DF /* EC2CreateInstanceExportTaskResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7281610FE9F003967DF /* EC2CreateInstanceExportTaskResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7421610FE9F003967DF /* EC2CreateInstanceExportTaskResponseUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7291610FE9F003967DF /* EC2CreateInstanceExportTaskResponseUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7431610FE9F003967DF /* EC2DescribeExportTasksRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F72A1610FE9F003967DF /* EC2DescribeExportTasksRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7441610FE9F003967DF /* EC2DescribeExportTasksRequestMarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F72B1610FE9F003967DF /* EC2DescribeExportTasksRequestMarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7451610FE9F003967DF /* EC2DescribeExportTasksResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F72C1610FE9F003967DF /* EC2DescribeExportTasksResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7461610FE9F003967DF /* EC2DescribeExportTasksResponseUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F72D1610FE9F003967DF /* EC2DescribeExportTasksResponseUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7471610FE9F003967DF /* EC2ExportTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F72E1610FE9F003967DF /* EC2ExportTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7481610FE9F003967DF /* EC2ExportTaskUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F72F1610FE9F003967DF /* EC2ExportTaskUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7491610FE9F003967DF /* EC2ExportToS3Task.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7301610FE9F003967DF /* EC2ExportToS3Task.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F74A1610FE9F003967DF /* EC2ExportToS3TaskSpecification.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7311610FE9F003967DF /* EC2ExportToS3TaskSpecification.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F74B1610FE9F003967DF /* EC2ExportToS3TaskUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7321610FE9F003967DF /* EC2ExportToS3TaskUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F74C1610FE9F003967DF /* EC2IamInstanceProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7331610FE9F003967DF /* EC2IamInstanceProfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F74D1610FE9F003967DF /* EC2IamInstanceProfileSpecification.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7341610FE9F003967DF /* EC2IamInstanceProfileSpecification.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F74E1610FE9F003967DF /* EC2IamInstanceProfileSpecificationUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7351610FE9F003967DF /* EC2IamInstanceProfileSpecificationUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F74F1610FE9F003967DF /* EC2IamInstanceProfileUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7361610FE9F003967DF /* EC2IamInstanceProfileUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7501610FE9F003967DF /* EC2InstanceExportDetails.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7371610FE9F003967DF /* EC2InstanceExportDetails.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7511610FE9F003967DF /* EC2InstanceExportDetailsUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7381610FE9F003967DF /* EC2InstanceExportDetailsUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7521610FE9F003967DF /* EC2PrivateIpAddressSpecification.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7391610FE9F003967DF /* EC2PrivateIpAddressSpecification.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7531610FE9F003967DF /* EC2PrivateIpAddressSpecificationUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F73A1610FE9F003967DF /* EC2PrivateIpAddressSpecificationUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F75F1610FEBE003967DF /* S3BucketTaggingConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7541610FEBA003967DF /* S3BucketTaggingConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7601610FEBE003967DF /* S3BucketTaggingConfigurationUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7551610FEBA003967DF /* S3BucketTaggingConfigurationUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7611610FEBE003967DF /* S3BucketTagSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7561610FEBA003967DF /* S3BucketTagSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7621610FEBE003967DF /* S3BucketTagSetUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7571610FEBB003967DF /* S3BucketTagSetUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7631610FEBE003967DF /* S3DeleteBucketTaggingRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7581610FEBB003967DF /* S3DeleteBucketTaggingRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7641610FEBE003967DF /* S3DeleteBucketTaggingResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7591610FEBC003967DF /* S3DeleteBucketTaggingResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7651610FEBE003967DF /* S3GetBucketTaggingRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F75A1610FEBC003967DF /* S3GetBucketTaggingRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7661610FEBE003967DF /* S3GetBucketTaggingResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F75B1610FEBD003967DF /* S3GetBucketTaggingResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7671610FEBE003967DF /* S3SetBucketTaggingRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F75C1610FEBD003967DF /* S3SetBucketTaggingRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7681610FEBE003967DF /* S3SetBucketTaggingResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F75D1610FEBD003967DF /* S3SetBucketTaggingResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7691610FEBE003967DF /* S3UploadInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F75E1610FEBE003967DF /* S3UploadInputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F7751610FEF7003967DF /* S3BucketTaggingConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F76A1610FED8003967DF /* S3BucketTaggingConfiguration.m */; };
+		8C26F7761610FEF7003967DF /* S3BucketTaggingConfigurationUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F76B1610FEDA003967DF /* S3BucketTaggingConfigurationUnmarshaller.m */; };
+		8C26F7771610FEF7003967DF /* S3BucketTagSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F76C1610FEDC003967DF /* S3BucketTagSet.m */; };
+		8C26F7781610FEF7003967DF /* S3BucketTagSetUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F76D1610FEDE003967DF /* S3BucketTagSetUnmarshaller.m */; };
+		8C26F7791610FEF7003967DF /* S3DeleteBucketTaggingRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F76E1610FEE1003967DF /* S3DeleteBucketTaggingRequest.m */; };
+		8C26F77A1610FEF7003967DF /* S3DeleteBucketTaggingResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F76F1610FEE2003967DF /* S3DeleteBucketTaggingResponse.m */; };
+		8C26F77B1610FEF7003967DF /* S3GetBucketTaggingRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7701610FEE7003967DF /* S3GetBucketTaggingRequest.m */; };
+		8C26F77C1610FEF7003967DF /* S3GetBucketTaggingResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7711610FEE9003967DF /* S3GetBucketTaggingResponse.m */; };
+		8C26F77D1610FEF7003967DF /* S3SetBucketTaggingRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7721610FEEA003967DF /* S3SetBucketTaggingRequest.m */; };
+		8C26F77E1610FEF7003967DF /* S3SetBucketTaggingResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7731610FEEB003967DF /* S3SetBucketTaggingResponse.m */; };
+		8C26F77F1610FEF7003967DF /* S3UploadInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7741610FEF6003967DF /* S3UploadInputStream.m */; };
+		8C26F7821610FFCE003967DF /* EC2DescribeExportTasksRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7801610FFCE003967DF /* EC2DescribeExportTasksRequest.m */; };
+		8C26F7831610FFCE003967DF /* EC2DescribeExportTasksRequestMarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7811610FFCE003967DF /* EC2DescribeExportTasksRequestMarshaller.m */; };
+		8C26F7B61611000A003967DF /* SESDeleteIdentityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7841611000A003967DF /* SESDeleteIdentityRequest.m */; };
+		8C26F7B71611000A003967DF /* SESDeleteIdentityRequestMarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7851611000A003967DF /* SESDeleteIdentityRequestMarshaller.m */; };
+		8C26F7B81611000A003967DF /* SESDeleteIdentityResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7861611000A003967DF /* SESDeleteIdentityResponse.m */; };
+		8C26F7B91611000A003967DF /* SESDeleteIdentityResponseUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7871611000A003967DF /* SESDeleteIdentityResponseUnmarshaller.m */; };
+		8C26F7BA1611000A003967DF /* SESGetIdentityDkimAttributesRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7881611000A003967DF /* SESGetIdentityDkimAttributesRequest.m */; };
+		8C26F7BB1611000A003967DF /* SESGetIdentityDkimAttributesRequestMarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7891611000A003967DF /* SESGetIdentityDkimAttributesRequestMarshaller.m */; };
+		8C26F7BC1611000A003967DF /* SESGetIdentityDkimAttributesResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F78A1611000A003967DF /* SESGetIdentityDkimAttributesResponse.m */; };
+		8C26F7BD1611000A003967DF /* SESGetIdentityDkimAttributesResponseUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F78B1611000A003967DF /* SESGetIdentityDkimAttributesResponseUnmarshaller.m */; };
+		8C26F7BE1611000A003967DF /* SESGetIdentityNotificationAttributesRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F78C1611000A003967DF /* SESGetIdentityNotificationAttributesRequest.m */; };
+		8C26F7BF1611000A003967DF /* SESGetIdentityNotificationAttributesRequestMarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F78D1611000A003967DF /* SESGetIdentityNotificationAttributesRequestMarshaller.m */; };
+		8C26F7C01611000A003967DF /* SESGetIdentityNotificationAttributesResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F78E1611000A003967DF /* SESGetIdentityNotificationAttributesResponse.m */; };
+		8C26F7C11611000A003967DF /* SESGetIdentityNotificationAttributesResponseUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F78F1611000A003967DF /* SESGetIdentityNotificationAttributesResponseUnmarshaller.m */; };
+		8C26F7C21611000A003967DF /* SESGetIdentityVerificationAttributesRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7901611000A003967DF /* SESGetIdentityVerificationAttributesRequest.m */; };
+		8C26F7C31611000A003967DF /* SESGetIdentityVerificationAttributesRequestMarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7911611000A003967DF /* SESGetIdentityVerificationAttributesRequestMarshaller.m */; };
+		8C26F7C41611000A003967DF /* SESGetIdentityVerificationAttributesResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7921611000A003967DF /* SESGetIdentityVerificationAttributesResponse.m */; };
+		8C26F7C51611000A003967DF /* SESGetIdentityVerificationAttributesResponseUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7931611000A003967DF /* SESGetIdentityVerificationAttributesResponseUnmarshaller.m */; };
+		8C26F7C61611000A003967DF /* SESIdentityDkimAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7941611000A003967DF /* SESIdentityDkimAttributes.m */; };
+		8C26F7C71611000A003967DF /* SESIdentityDkimAttributesUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7951611000A003967DF /* SESIdentityDkimAttributesUnmarshaller.m */; };
+		8C26F7C81611000A003967DF /* SESIdentityNotificationAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7961611000A003967DF /* SESIdentityNotificationAttributes.m */; };
+		8C26F7C91611000A003967DF /* SESIdentityNotificationAttributesUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7971611000A003967DF /* SESIdentityNotificationAttributesUnmarshaller.m */; };
+		8C26F7CA1611000A003967DF /* SESIdentityVerificationAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7981611000A003967DF /* SESIdentityVerificationAttributes.m */; };
+		8C26F7CB1611000A003967DF /* SESIdentityVerificationAttributesUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7991611000A003967DF /* SESIdentityVerificationAttributesUnmarshaller.m */; };
+		8C26F7CC1611000A003967DF /* SESListIdentitiesRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F79A1611000A003967DF /* SESListIdentitiesRequest.m */; };
+		8C26F7CD1611000A003967DF /* SESListIdentitiesRequestMarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F79B1611000A003967DF /* SESListIdentitiesRequestMarshaller.m */; };
+		8C26F7CE1611000A003967DF /* SESListIdentitiesResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F79C1611000A003967DF /* SESListIdentitiesResponse.m */; };
+		8C26F7CF1611000A003967DF /* SESListIdentitiesResponseUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F79D1611000A003967DF /* SESListIdentitiesResponseUnmarshaller.m */; };
+		8C26F7D01611000A003967DF /* SESSetIdentityDkimEnabledRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F79E1611000A003967DF /* SESSetIdentityDkimEnabledRequest.m */; };
+		8C26F7D11611000A003967DF /* SESSetIdentityDkimEnabledRequestMarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F79F1611000A003967DF /* SESSetIdentityDkimEnabledRequestMarshaller.m */; };
+		8C26F7D21611000A003967DF /* SESSetIdentityDkimEnabledResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7A01611000A003967DF /* SESSetIdentityDkimEnabledResponse.m */; };
+		8C26F7D31611000A003967DF /* SESSetIdentityDkimEnabledResponseUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7A11611000A003967DF /* SESSetIdentityDkimEnabledResponseUnmarshaller.m */; };
+		8C26F7D41611000A003967DF /* SESSetIdentityFeedbackForwardingEnabledRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7A21611000A003967DF /* SESSetIdentityFeedbackForwardingEnabledRequest.m */; };
+		8C26F7D51611000A003967DF /* SESSetIdentityFeedbackForwardingEnabledRequestMarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7A31611000A003967DF /* SESSetIdentityFeedbackForwardingEnabledRequestMarshaller.m */; };
+		8C26F7D61611000A003967DF /* SESSetIdentityFeedbackForwardingEnabledResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7A41611000A003967DF /* SESSetIdentityFeedbackForwardingEnabledResponse.m */; };
+		8C26F7D71611000A003967DF /* SESSetIdentityFeedbackForwardingEnabledResponseUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7A51611000A003967DF /* SESSetIdentityFeedbackForwardingEnabledResponseUnmarshaller.m */; };
+		8C26F7D81611000A003967DF /* SESSetIdentityNotificationTopicRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7A61611000A003967DF /* SESSetIdentityNotificationTopicRequest.m */; };
+		8C26F7D91611000A003967DF /* SESSetIdentityNotificationTopicRequestMarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7A71611000A003967DF /* SESSetIdentityNotificationTopicRequestMarshaller.m */; };
+		8C26F7DA1611000A003967DF /* SESSetIdentityNotificationTopicResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7A81611000A003967DF /* SESSetIdentityNotificationTopicResponse.m */; };
+		8C26F7DB1611000A003967DF /* SESSetIdentityNotificationTopicResponseUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7A91611000A003967DF /* SESSetIdentityNotificationTopicResponseUnmarshaller.m */; };
+		8C26F7DC1611000A003967DF /* SESVerifyDomainDkimRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7AA1611000A003967DF /* SESVerifyDomainDkimRequest.m */; };
+		8C26F7DD1611000A003967DF /* SESVerifyDomainDkimRequestMarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7AB1611000A003967DF /* SESVerifyDomainDkimRequestMarshaller.m */; };
+		8C26F7DE1611000A003967DF /* SESVerifyDomainDkimResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7AC1611000A003967DF /* SESVerifyDomainDkimResponse.m */; };
+		8C26F7DF1611000A003967DF /* SESVerifyDomainDkimResponseUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7AD1611000A003967DF /* SESVerifyDomainDkimResponseUnmarshaller.m */; };
+		8C26F7E01611000A003967DF /* SESVerifyDomainIdentityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7AE1611000A003967DF /* SESVerifyDomainIdentityRequest.m */; };
+		8C26F7E11611000A003967DF /* SESVerifyDomainIdentityRequestMarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7AF1611000A003967DF /* SESVerifyDomainIdentityRequestMarshaller.m */; };
+		8C26F7E21611000A003967DF /* SESVerifyDomainIdentityResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7B01611000A003967DF /* SESVerifyDomainIdentityResponse.m */; };
+		8C26F7E31611000A003967DF /* SESVerifyDomainIdentityResponseUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7B11611000A003967DF /* SESVerifyDomainIdentityResponseUnmarshaller.m */; };
+		8C26F7E41611000A003967DF /* SESVerifyEmailIdentityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7B21611000A003967DF /* SESVerifyEmailIdentityRequest.m */; };
+		8C26F7E51611000A003967DF /* SESVerifyEmailIdentityRequestMarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7B31611000A003967DF /* SESVerifyEmailIdentityRequestMarshaller.m */; };
+		8C26F7E61611000A003967DF /* SESVerifyEmailIdentityResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7B41611000A003967DF /* SESVerifyEmailIdentityResponse.m */; };
+		8C26F7E71611000A003967DF /* SESVerifyEmailIdentityResponseUnmarshaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26F7B51611000A003967DF /* SESVerifyEmailIdentityResponseUnmarshaller.m */; };
+		8C26F81A16110036003967DF /* SESDeleteIdentityRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7E816110036003967DF /* SESDeleteIdentityRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F81B16110036003967DF /* SESDeleteIdentityRequestMarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7E916110036003967DF /* SESDeleteIdentityRequestMarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F81C16110036003967DF /* SESDeleteIdentityResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7EA16110036003967DF /* SESDeleteIdentityResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F81D16110036003967DF /* SESDeleteIdentityResponseUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7EB16110036003967DF /* SESDeleteIdentityResponseUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F81E16110036003967DF /* SESGetIdentityDkimAttributesRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7EC16110036003967DF /* SESGetIdentityDkimAttributesRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F81F16110036003967DF /* SESGetIdentityDkimAttributesRequestMarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7ED16110036003967DF /* SESGetIdentityDkimAttributesRequestMarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F82016110036003967DF /* SESGetIdentityDkimAttributesResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7EE16110036003967DF /* SESGetIdentityDkimAttributesResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F82116110036003967DF /* SESGetIdentityDkimAttributesResponseUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7EF16110036003967DF /* SESGetIdentityDkimAttributesResponseUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F82216110036003967DF /* SESGetIdentityNotificationAttributesRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7F016110036003967DF /* SESGetIdentityNotificationAttributesRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F82316110036003967DF /* SESGetIdentityNotificationAttributesRequestMarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7F116110036003967DF /* SESGetIdentityNotificationAttributesRequestMarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F82416110036003967DF /* SESGetIdentityNotificationAttributesResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7F216110036003967DF /* SESGetIdentityNotificationAttributesResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F82516110036003967DF /* SESGetIdentityNotificationAttributesResponseUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7F316110036003967DF /* SESGetIdentityNotificationAttributesResponseUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F82616110036003967DF /* SESGetIdentityVerificationAttributesRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7F416110036003967DF /* SESGetIdentityVerificationAttributesRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F82716110036003967DF /* SESGetIdentityVerificationAttributesRequestMarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7F516110036003967DF /* SESGetIdentityVerificationAttributesRequestMarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F82816110036003967DF /* SESGetIdentityVerificationAttributesResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7F616110036003967DF /* SESGetIdentityVerificationAttributesResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F82916110036003967DF /* SESGetIdentityVerificationAttributesResponseUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7F716110036003967DF /* SESGetIdentityVerificationAttributesResponseUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F82A16110036003967DF /* SESIdentityDkimAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7F816110036003967DF /* SESIdentityDkimAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F82B16110036003967DF /* SESIdentityDkimAttributesUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7F916110036003967DF /* SESIdentityDkimAttributesUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F82C16110036003967DF /* SESIdentityNotificationAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7FA16110036003967DF /* SESIdentityNotificationAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F82D16110036003967DF /* SESIdentityNotificationAttributesUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7FB16110036003967DF /* SESIdentityNotificationAttributesUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F82E16110036003967DF /* SESIdentityVerificationAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7FC16110036003967DF /* SESIdentityVerificationAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F82F16110036003967DF /* SESIdentityVerificationAttributesUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7FD16110036003967DF /* SESIdentityVerificationAttributesUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F83016110036003967DF /* SESListIdentitiesRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7FE16110036003967DF /* SESListIdentitiesRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F83116110036003967DF /* SESListIdentitiesRequestMarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F7FF16110036003967DF /* SESListIdentitiesRequestMarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F83216110036003967DF /* SESListIdentitiesResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F80016110036003967DF /* SESListIdentitiesResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F83316110036003967DF /* SESListIdentitiesResponseUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F80116110036003967DF /* SESListIdentitiesResponseUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F83416110036003967DF /* SESSetIdentityDkimEnabledRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F80216110036003967DF /* SESSetIdentityDkimEnabledRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F83516110036003967DF /* SESSetIdentityDkimEnabledRequestMarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F80316110036003967DF /* SESSetIdentityDkimEnabledRequestMarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F83616110036003967DF /* SESSetIdentityDkimEnabledResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F80416110036003967DF /* SESSetIdentityDkimEnabledResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F83716110036003967DF /* SESSetIdentityDkimEnabledResponseUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F80516110036003967DF /* SESSetIdentityDkimEnabledResponseUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F83816110036003967DF /* SESSetIdentityFeedbackForwardingEnabledRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F80616110036003967DF /* SESSetIdentityFeedbackForwardingEnabledRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F83916110036003967DF /* SESSetIdentityFeedbackForwardingEnabledRequestMarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F80716110036003967DF /* SESSetIdentityFeedbackForwardingEnabledRequestMarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F83A16110036003967DF /* SESSetIdentityFeedbackForwardingEnabledResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F80816110036003967DF /* SESSetIdentityFeedbackForwardingEnabledResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F83B16110036003967DF /* SESSetIdentityFeedbackForwardingEnabledResponseUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F80916110036003967DF /* SESSetIdentityFeedbackForwardingEnabledResponseUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F83C16110036003967DF /* SESSetIdentityNotificationTopicRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F80A16110036003967DF /* SESSetIdentityNotificationTopicRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F83D16110036003967DF /* SESSetIdentityNotificationTopicRequestMarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F80B16110036003967DF /* SESSetIdentityNotificationTopicRequestMarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F83E16110036003967DF /* SESSetIdentityNotificationTopicResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F80C16110036003967DF /* SESSetIdentityNotificationTopicResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F83F16110036003967DF /* SESSetIdentityNotificationTopicResponseUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F80D16110036003967DF /* SESSetIdentityNotificationTopicResponseUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F84016110036003967DF /* SESVerifyDomainDkimRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F80E16110036003967DF /* SESVerifyDomainDkimRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F84116110036003967DF /* SESVerifyDomainDkimRequestMarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F80F16110036003967DF /* SESVerifyDomainDkimRequestMarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F84216110036003967DF /* SESVerifyDomainDkimResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F81016110036003967DF /* SESVerifyDomainDkimResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F84316110036003967DF /* SESVerifyDomainDkimResponseUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F81116110036003967DF /* SESVerifyDomainDkimResponseUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F84416110036003967DF /* SESVerifyDomainIdentityRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F81216110036003967DF /* SESVerifyDomainIdentityRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F84516110036003967DF /* SESVerifyDomainIdentityRequestMarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F81316110036003967DF /* SESVerifyDomainIdentityRequestMarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F84616110036003967DF /* SESVerifyDomainIdentityResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F81416110036003967DF /* SESVerifyDomainIdentityResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F84716110036003967DF /* SESVerifyDomainIdentityResponseUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F81516110036003967DF /* SESVerifyDomainIdentityResponseUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F84816110036003967DF /* SESVerifyEmailIdentityRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F81616110036003967DF /* SESVerifyEmailIdentityRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F84916110036003967DF /* SESVerifyEmailIdentityRequestMarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F81716110036003967DF /* SESVerifyEmailIdentityRequestMarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F84A16110036003967DF /* SESVerifyEmailIdentityResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F81816110036003967DF /* SESVerifyEmailIdentityResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C26F84B16110036003967DF /* SESVerifyEmailIdentityResponseUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C26F81916110036003967DF /* SESVerifyEmailIdentityResponseUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C2A87EB15336E12002B56EC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2A87EA15336E12002B56EC /* Cocoa.framework */; };
 		8C2A87F515336E13002B56EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C2A87F315336E13002B56EC /* InfoPlist.strings */; };
 		8C2A932F15336EB0002B56EC /* AmazonAutoScalingClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2A880115336EAD002B56EC /* AmazonAutoScalingClient.m */; };
@@ -2792,12 +2990,6 @@
 		8C2A9E1015336EB2002B56EC /* SecurityTokenServiceRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C2A930A15336EAF002B56EC /* SecurityTokenServiceRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C2A9E1115336EB2002B56EC /* SecurityTokenServiceResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C2A930B15336EAF002B56EC /* SecurityTokenServiceResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C2A9E1215336EB2002B56EC /* SecurityTokenServiceResponseUnmarshaller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C2A930C15336EAF002B56EC /* SecurityTokenServiceResponseUnmarshaller.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8C2A9E1315336EB2002B56EC /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C2A930E15336EAF002B56EC /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8C2A9E1415336EB2002B56EC /* GTMGarbageCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C2A930F15336EAF002B56EC /* GTMGarbageCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8C2A9E1515336EB2002B56EC /* GTMLogger+ASL.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C2A931015336EAF002B56EC /* GTMLogger+ASL.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8C2A9E1615336EB2002B56EC /* GTMLogger+ASL.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2A931115336EAF002B56EC /* GTMLogger+ASL.m */; };
-		8C2A9E1715336EB2002B56EC /* GTMLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C2A931215336EAF002B56EC /* GTMLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8C2A9E1815336EB2002B56EC /* GTMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2A931315336EAF002B56EC /* GTMLogger.m */; };
 		8C2A9E1915336EB2002B56EC /* JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C2A931515336EAF002B56EC /* JSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C2A9E1A15336EB2002B56EC /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 8C2A931615336EAF002B56EC /* LICENSE */; };
 		8C2A9E1B15336EB2002B56EC /* SBJson.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C2A931715336EAF002B56EC /* SBJson.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -2827,6 +3019,204 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C26F6BF1610FA6F003967DF /* AmazonErrorHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmazonErrorHandler.h; sourceTree = "<group>"; };
+		8C26F6C21610FD2D003967DF /* AmazonErrorHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmazonErrorHandler.m; sourceTree = "<group>"; };
+		8C26F6C41610FD7B003967DF /* DynamoDBBatchWriteItemRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamoDBBatchWriteItemRequest.m; sourceTree = "<group>"; };
+		8C26F6C51610FD7C003967DF /* DynamoDBBatchWriteItemRequestMarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamoDBBatchWriteItemRequestMarshaller.m; sourceTree = "<group>"; };
+		8C26F6C61610FD7C003967DF /* DynamoDBBatchWriteItemResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamoDBBatchWriteItemResponse.m; sourceTree = "<group>"; };
+		8C26F6C71610FD7E003967DF /* DynamoDBBatchWriteItemResponseUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamoDBBatchWriteItemResponseUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F6C81610FD80003967DF /* DynamoDBBatchWriteResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamoDBBatchWriteResponse.m; sourceTree = "<group>"; };
+		8C26F6C91610FD81003967DF /* DynamoDBBatchWriteResponseUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamoDBBatchWriteResponseUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F6D01610FDAB003967DF /* DynamoDBBatchWriteItemRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamoDBBatchWriteItemRequest.h; sourceTree = "<group>"; };
+		8C26F6D11610FDAB003967DF /* DynamoDBBatchWriteItemRequestMarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamoDBBatchWriteItemRequestMarshaller.h; sourceTree = "<group>"; };
+		8C26F6D21610FDAB003967DF /* DynamoDBBatchWriteItemResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamoDBBatchWriteItemResponse.h; sourceTree = "<group>"; };
+		8C26F6D31610FDAB003967DF /* DynamoDBBatchWriteItemResponseUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamoDBBatchWriteItemResponseUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F6D41610FDAB003967DF /* DynamoDBBatchWriteResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamoDBBatchWriteResponse.h; sourceTree = "<group>"; };
+		8C26F6D51610FDAB003967DF /* DynamoDBBatchWriteResponseUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamoDBBatchWriteResponseUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F6DC1610FDFA003967DF /* DynamoDBDeleteRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamoDBDeleteRequest.h; sourceTree = "<group>"; };
+		8C26F6DD1610FDFA003967DF /* DynamoDBDeleteRequestUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamoDBDeleteRequestUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F6DE1610FDFA003967DF /* DynamoDBPutRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamoDBPutRequest.h; sourceTree = "<group>"; };
+		8C26F6DF1610FDFA003967DF /* DynamoDBPutRequestUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamoDBPutRequestUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F6E01610FDFA003967DF /* DynamoDBWriteRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamoDBWriteRequest.h; sourceTree = "<group>"; };
+		8C26F6E11610FDFA003967DF /* DynamoDBWriteRequestUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamoDBWriteRequestUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F6E81610FE11003967DF /* DynamoDBDeleteRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamoDBDeleteRequest.m; sourceTree = "<group>"; };
+		8C26F6E91610FE12003967DF /* DynamoDBDeleteRequestUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamoDBDeleteRequestUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F6EA1610FE14003967DF /* DynamoDBPutRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamoDBPutRequest.m; sourceTree = "<group>"; };
+		8C26F6EB1610FE15003967DF /* DynamoDBPutRequestUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamoDBPutRequestUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F6EC1610FE16003967DF /* DynamoDBWriteRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamoDBWriteRequest.m; sourceTree = "<group>"; };
+		8C26F6ED1610FE17003967DF /* DynamoDBWriteRequestUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamoDBWriteRequestUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F6F41610FE6A003967DF /* EC2CancelExportTaskRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2CancelExportTaskRequest.m; sourceTree = "<group>"; };
+		8C26F6F51610FE6A003967DF /* EC2CancelExportTaskRequestMarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2CancelExportTaskRequestMarshaller.m; sourceTree = "<group>"; };
+		8C26F6F61610FE6A003967DF /* EC2CancelExportTaskResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2CancelExportTaskResponse.m; sourceTree = "<group>"; };
+		8C26F6F71610FE6A003967DF /* EC2CancelExportTaskResponseUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2CancelExportTaskResponseUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F6F81610FE6A003967DF /* EC2CreateInstanceExportTaskRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2CreateInstanceExportTaskRequest.m; sourceTree = "<group>"; };
+		8C26F6F91610FE6A003967DF /* EC2CreateInstanceExportTaskRequestMarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2CreateInstanceExportTaskRequestMarshaller.m; sourceTree = "<group>"; };
+		8C26F6FA1610FE6A003967DF /* EC2CreateInstanceExportTaskResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2CreateInstanceExportTaskResponse.m; sourceTree = "<group>"; };
+		8C26F6FB1610FE6A003967DF /* EC2CreateInstanceExportTaskResponseUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2CreateInstanceExportTaskResponseUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F6FC1610FE6A003967DF /* EC2DescribeExportTasksResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2DescribeExportTasksResponse.m; sourceTree = "<group>"; };
+		8C26F6FD1610FE6A003967DF /* EC2DescribeExportTasksResponseUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2DescribeExportTasksResponseUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F6FE1610FE6A003967DF /* EC2ExportTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2ExportTask.m; sourceTree = "<group>"; };
+		8C26F6FF1610FE6A003967DF /* EC2ExportTaskUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2ExportTaskUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F7001610FE6A003967DF /* EC2ExportToS3Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2ExportToS3Task.m; sourceTree = "<group>"; };
+		8C26F7011610FE6A003967DF /* EC2ExportToS3TaskSpecification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2ExportToS3TaskSpecification.m; sourceTree = "<group>"; };
+		8C26F7021610FE6A003967DF /* EC2ExportToS3TaskUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2ExportToS3TaskUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F7031610FE6A003967DF /* EC2IamInstanceProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2IamInstanceProfile.m; sourceTree = "<group>"; };
+		8C26F7041610FE6A003967DF /* EC2IamInstanceProfileSpecification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2IamInstanceProfileSpecification.m; sourceTree = "<group>"; };
+		8C26F7051610FE6A003967DF /* EC2IamInstanceProfileSpecificationUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2IamInstanceProfileSpecificationUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F7061610FE6A003967DF /* EC2IamInstanceProfileUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2IamInstanceProfileUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F7071610FE6A003967DF /* EC2InstanceExportDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2InstanceExportDetails.m; sourceTree = "<group>"; };
+		8C26F7081610FE6A003967DF /* EC2InstanceExportDetailsUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2InstanceExportDetailsUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F7091610FE6A003967DF /* EC2PrivateIpAddressSpecification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2PrivateIpAddressSpecification.m; sourceTree = "<group>"; };
+		8C26F70A1610FE6A003967DF /* EC2PrivateIpAddressSpecificationUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2PrivateIpAddressSpecificationUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F7221610FE9F003967DF /* EC2CancelExportTaskRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2CancelExportTaskRequest.h; sourceTree = "<group>"; };
+		8C26F7231610FE9F003967DF /* EC2CancelExportTaskRequestMarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2CancelExportTaskRequestMarshaller.h; sourceTree = "<group>"; };
+		8C26F7241610FE9F003967DF /* EC2CancelExportTaskResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2CancelExportTaskResponse.h; sourceTree = "<group>"; };
+		8C26F7251610FE9F003967DF /* EC2CancelExportTaskResponseUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2CancelExportTaskResponseUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F7261610FE9F003967DF /* EC2CreateInstanceExportTaskRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2CreateInstanceExportTaskRequest.h; sourceTree = "<group>"; };
+		8C26F7271610FE9F003967DF /* EC2CreateInstanceExportTaskRequestMarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2CreateInstanceExportTaskRequestMarshaller.h; sourceTree = "<group>"; };
+		8C26F7281610FE9F003967DF /* EC2CreateInstanceExportTaskResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2CreateInstanceExportTaskResponse.h; sourceTree = "<group>"; };
+		8C26F7291610FE9F003967DF /* EC2CreateInstanceExportTaskResponseUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2CreateInstanceExportTaskResponseUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F72A1610FE9F003967DF /* EC2DescribeExportTasksRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2DescribeExportTasksRequest.h; sourceTree = "<group>"; };
+		8C26F72B1610FE9F003967DF /* EC2DescribeExportTasksRequestMarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2DescribeExportTasksRequestMarshaller.h; sourceTree = "<group>"; };
+		8C26F72C1610FE9F003967DF /* EC2DescribeExportTasksResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2DescribeExportTasksResponse.h; sourceTree = "<group>"; };
+		8C26F72D1610FE9F003967DF /* EC2DescribeExportTasksResponseUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2DescribeExportTasksResponseUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F72E1610FE9F003967DF /* EC2ExportTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2ExportTask.h; sourceTree = "<group>"; };
+		8C26F72F1610FE9F003967DF /* EC2ExportTaskUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2ExportTaskUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F7301610FE9F003967DF /* EC2ExportToS3Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2ExportToS3Task.h; sourceTree = "<group>"; };
+		8C26F7311610FE9F003967DF /* EC2ExportToS3TaskSpecification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2ExportToS3TaskSpecification.h; sourceTree = "<group>"; };
+		8C26F7321610FE9F003967DF /* EC2ExportToS3TaskUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2ExportToS3TaskUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F7331610FE9F003967DF /* EC2IamInstanceProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2IamInstanceProfile.h; sourceTree = "<group>"; };
+		8C26F7341610FE9F003967DF /* EC2IamInstanceProfileSpecification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2IamInstanceProfileSpecification.h; sourceTree = "<group>"; };
+		8C26F7351610FE9F003967DF /* EC2IamInstanceProfileSpecificationUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2IamInstanceProfileSpecificationUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F7361610FE9F003967DF /* EC2IamInstanceProfileUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2IamInstanceProfileUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F7371610FE9F003967DF /* EC2InstanceExportDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2InstanceExportDetails.h; sourceTree = "<group>"; };
+		8C26F7381610FE9F003967DF /* EC2InstanceExportDetailsUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2InstanceExportDetailsUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F7391610FE9F003967DF /* EC2PrivateIpAddressSpecification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2PrivateIpAddressSpecification.h; sourceTree = "<group>"; };
+		8C26F73A1610FE9F003967DF /* EC2PrivateIpAddressSpecificationUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EC2PrivateIpAddressSpecificationUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F7541610FEBA003967DF /* S3BucketTaggingConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S3BucketTaggingConfiguration.h; sourceTree = "<group>"; };
+		8C26F7551610FEBA003967DF /* S3BucketTaggingConfigurationUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S3BucketTaggingConfigurationUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F7561610FEBA003967DF /* S3BucketTagSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S3BucketTagSet.h; sourceTree = "<group>"; };
+		8C26F7571610FEBB003967DF /* S3BucketTagSetUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S3BucketTagSetUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F7581610FEBB003967DF /* S3DeleteBucketTaggingRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S3DeleteBucketTaggingRequest.h; sourceTree = "<group>"; };
+		8C26F7591610FEBC003967DF /* S3DeleteBucketTaggingResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S3DeleteBucketTaggingResponse.h; sourceTree = "<group>"; };
+		8C26F75A1610FEBC003967DF /* S3GetBucketTaggingRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S3GetBucketTaggingRequest.h; sourceTree = "<group>"; };
+		8C26F75B1610FEBD003967DF /* S3GetBucketTaggingResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S3GetBucketTaggingResponse.h; sourceTree = "<group>"; };
+		8C26F75C1610FEBD003967DF /* S3SetBucketTaggingRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S3SetBucketTaggingRequest.h; sourceTree = "<group>"; };
+		8C26F75D1610FEBD003967DF /* S3SetBucketTaggingResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S3SetBucketTaggingResponse.h; sourceTree = "<group>"; };
+		8C26F75E1610FEBE003967DF /* S3UploadInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = S3UploadInputStream.h; sourceTree = "<group>"; };
+		8C26F76A1610FED8003967DF /* S3BucketTaggingConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = S3BucketTaggingConfiguration.m; sourceTree = "<group>"; };
+		8C26F76B1610FEDA003967DF /* S3BucketTaggingConfigurationUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = S3BucketTaggingConfigurationUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F76C1610FEDC003967DF /* S3BucketTagSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = S3BucketTagSet.m; sourceTree = "<group>"; };
+		8C26F76D1610FEDE003967DF /* S3BucketTagSetUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = S3BucketTagSetUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F76E1610FEE1003967DF /* S3DeleteBucketTaggingRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = S3DeleteBucketTaggingRequest.m; sourceTree = "<group>"; };
+		8C26F76F1610FEE2003967DF /* S3DeleteBucketTaggingResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = S3DeleteBucketTaggingResponse.m; sourceTree = "<group>"; };
+		8C26F7701610FEE7003967DF /* S3GetBucketTaggingRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = S3GetBucketTaggingRequest.m; sourceTree = "<group>"; };
+		8C26F7711610FEE9003967DF /* S3GetBucketTaggingResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = S3GetBucketTaggingResponse.m; sourceTree = "<group>"; };
+		8C26F7721610FEEA003967DF /* S3SetBucketTaggingRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = S3SetBucketTaggingRequest.m; sourceTree = "<group>"; };
+		8C26F7731610FEEB003967DF /* S3SetBucketTaggingResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = S3SetBucketTaggingResponse.m; sourceTree = "<group>"; };
+		8C26F7741610FEF6003967DF /* S3UploadInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = S3UploadInputStream.m; sourceTree = "<group>"; };
+		8C26F7801610FFCE003967DF /* EC2DescribeExportTasksRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2DescribeExportTasksRequest.m; sourceTree = "<group>"; };
+		8C26F7811610FFCE003967DF /* EC2DescribeExportTasksRequestMarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EC2DescribeExportTasksRequestMarshaller.m; sourceTree = "<group>"; };
+		8C26F7841611000A003967DF /* SESDeleteIdentityRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESDeleteIdentityRequest.m; sourceTree = "<group>"; };
+		8C26F7851611000A003967DF /* SESDeleteIdentityRequestMarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESDeleteIdentityRequestMarshaller.m; sourceTree = "<group>"; };
+		8C26F7861611000A003967DF /* SESDeleteIdentityResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESDeleteIdentityResponse.m; sourceTree = "<group>"; };
+		8C26F7871611000A003967DF /* SESDeleteIdentityResponseUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESDeleteIdentityResponseUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F7881611000A003967DF /* SESGetIdentityDkimAttributesRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESGetIdentityDkimAttributesRequest.m; sourceTree = "<group>"; };
+		8C26F7891611000A003967DF /* SESGetIdentityDkimAttributesRequestMarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESGetIdentityDkimAttributesRequestMarshaller.m; sourceTree = "<group>"; };
+		8C26F78A1611000A003967DF /* SESGetIdentityDkimAttributesResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESGetIdentityDkimAttributesResponse.m; sourceTree = "<group>"; };
+		8C26F78B1611000A003967DF /* SESGetIdentityDkimAttributesResponseUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESGetIdentityDkimAttributesResponseUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F78C1611000A003967DF /* SESGetIdentityNotificationAttributesRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESGetIdentityNotificationAttributesRequest.m; sourceTree = "<group>"; };
+		8C26F78D1611000A003967DF /* SESGetIdentityNotificationAttributesRequestMarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESGetIdentityNotificationAttributesRequestMarshaller.m; sourceTree = "<group>"; };
+		8C26F78E1611000A003967DF /* SESGetIdentityNotificationAttributesResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESGetIdentityNotificationAttributesResponse.m; sourceTree = "<group>"; };
+		8C26F78F1611000A003967DF /* SESGetIdentityNotificationAttributesResponseUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESGetIdentityNotificationAttributesResponseUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F7901611000A003967DF /* SESGetIdentityVerificationAttributesRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESGetIdentityVerificationAttributesRequest.m; sourceTree = "<group>"; };
+		8C26F7911611000A003967DF /* SESGetIdentityVerificationAttributesRequestMarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESGetIdentityVerificationAttributesRequestMarshaller.m; sourceTree = "<group>"; };
+		8C26F7921611000A003967DF /* SESGetIdentityVerificationAttributesResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESGetIdentityVerificationAttributesResponse.m; sourceTree = "<group>"; };
+		8C26F7931611000A003967DF /* SESGetIdentityVerificationAttributesResponseUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESGetIdentityVerificationAttributesResponseUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F7941611000A003967DF /* SESIdentityDkimAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESIdentityDkimAttributes.m; sourceTree = "<group>"; };
+		8C26F7951611000A003967DF /* SESIdentityDkimAttributesUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESIdentityDkimAttributesUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F7961611000A003967DF /* SESIdentityNotificationAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESIdentityNotificationAttributes.m; sourceTree = "<group>"; };
+		8C26F7971611000A003967DF /* SESIdentityNotificationAttributesUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESIdentityNotificationAttributesUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F7981611000A003967DF /* SESIdentityVerificationAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESIdentityVerificationAttributes.m; sourceTree = "<group>"; };
+		8C26F7991611000A003967DF /* SESIdentityVerificationAttributesUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESIdentityVerificationAttributesUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F79A1611000A003967DF /* SESListIdentitiesRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESListIdentitiesRequest.m; sourceTree = "<group>"; };
+		8C26F79B1611000A003967DF /* SESListIdentitiesRequestMarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESListIdentitiesRequestMarshaller.m; sourceTree = "<group>"; };
+		8C26F79C1611000A003967DF /* SESListIdentitiesResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESListIdentitiesResponse.m; sourceTree = "<group>"; };
+		8C26F79D1611000A003967DF /* SESListIdentitiesResponseUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESListIdentitiesResponseUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F79E1611000A003967DF /* SESSetIdentityDkimEnabledRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESSetIdentityDkimEnabledRequest.m; sourceTree = "<group>"; };
+		8C26F79F1611000A003967DF /* SESSetIdentityDkimEnabledRequestMarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESSetIdentityDkimEnabledRequestMarshaller.m; sourceTree = "<group>"; };
+		8C26F7A01611000A003967DF /* SESSetIdentityDkimEnabledResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESSetIdentityDkimEnabledResponse.m; sourceTree = "<group>"; };
+		8C26F7A11611000A003967DF /* SESSetIdentityDkimEnabledResponseUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESSetIdentityDkimEnabledResponseUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F7A21611000A003967DF /* SESSetIdentityFeedbackForwardingEnabledRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESSetIdentityFeedbackForwardingEnabledRequest.m; sourceTree = "<group>"; };
+		8C26F7A31611000A003967DF /* SESSetIdentityFeedbackForwardingEnabledRequestMarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESSetIdentityFeedbackForwardingEnabledRequestMarshaller.m; sourceTree = "<group>"; };
+		8C26F7A41611000A003967DF /* SESSetIdentityFeedbackForwardingEnabledResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESSetIdentityFeedbackForwardingEnabledResponse.m; sourceTree = "<group>"; };
+		8C26F7A51611000A003967DF /* SESSetIdentityFeedbackForwardingEnabledResponseUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESSetIdentityFeedbackForwardingEnabledResponseUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F7A61611000A003967DF /* SESSetIdentityNotificationTopicRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESSetIdentityNotificationTopicRequest.m; sourceTree = "<group>"; };
+		8C26F7A71611000A003967DF /* SESSetIdentityNotificationTopicRequestMarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESSetIdentityNotificationTopicRequestMarshaller.m; sourceTree = "<group>"; };
+		8C26F7A81611000A003967DF /* SESSetIdentityNotificationTopicResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESSetIdentityNotificationTopicResponse.m; sourceTree = "<group>"; };
+		8C26F7A91611000A003967DF /* SESSetIdentityNotificationTopicResponseUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESSetIdentityNotificationTopicResponseUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F7AA1611000A003967DF /* SESVerifyDomainDkimRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESVerifyDomainDkimRequest.m; sourceTree = "<group>"; };
+		8C26F7AB1611000A003967DF /* SESVerifyDomainDkimRequestMarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESVerifyDomainDkimRequestMarshaller.m; sourceTree = "<group>"; };
+		8C26F7AC1611000A003967DF /* SESVerifyDomainDkimResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESVerifyDomainDkimResponse.m; sourceTree = "<group>"; };
+		8C26F7AD1611000A003967DF /* SESVerifyDomainDkimResponseUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESVerifyDomainDkimResponseUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F7AE1611000A003967DF /* SESVerifyDomainIdentityRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESVerifyDomainIdentityRequest.m; sourceTree = "<group>"; };
+		8C26F7AF1611000A003967DF /* SESVerifyDomainIdentityRequestMarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESVerifyDomainIdentityRequestMarshaller.m; sourceTree = "<group>"; };
+		8C26F7B01611000A003967DF /* SESVerifyDomainIdentityResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESVerifyDomainIdentityResponse.m; sourceTree = "<group>"; };
+		8C26F7B11611000A003967DF /* SESVerifyDomainIdentityResponseUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESVerifyDomainIdentityResponseUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F7B21611000A003967DF /* SESVerifyEmailIdentityRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESVerifyEmailIdentityRequest.m; sourceTree = "<group>"; };
+		8C26F7B31611000A003967DF /* SESVerifyEmailIdentityRequestMarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESVerifyEmailIdentityRequestMarshaller.m; sourceTree = "<group>"; };
+		8C26F7B41611000A003967DF /* SESVerifyEmailIdentityResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESVerifyEmailIdentityResponse.m; sourceTree = "<group>"; };
+		8C26F7B51611000A003967DF /* SESVerifyEmailIdentityResponseUnmarshaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESVerifyEmailIdentityResponseUnmarshaller.m; sourceTree = "<group>"; };
+		8C26F7E816110036003967DF /* SESDeleteIdentityRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESDeleteIdentityRequest.h; sourceTree = "<group>"; };
+		8C26F7E916110036003967DF /* SESDeleteIdentityRequestMarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESDeleteIdentityRequestMarshaller.h; sourceTree = "<group>"; };
+		8C26F7EA16110036003967DF /* SESDeleteIdentityResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESDeleteIdentityResponse.h; sourceTree = "<group>"; };
+		8C26F7EB16110036003967DF /* SESDeleteIdentityResponseUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESDeleteIdentityResponseUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F7EC16110036003967DF /* SESGetIdentityDkimAttributesRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESGetIdentityDkimAttributesRequest.h; sourceTree = "<group>"; };
+		8C26F7ED16110036003967DF /* SESGetIdentityDkimAttributesRequestMarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESGetIdentityDkimAttributesRequestMarshaller.h; sourceTree = "<group>"; };
+		8C26F7EE16110036003967DF /* SESGetIdentityDkimAttributesResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESGetIdentityDkimAttributesResponse.h; sourceTree = "<group>"; };
+		8C26F7EF16110036003967DF /* SESGetIdentityDkimAttributesResponseUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESGetIdentityDkimAttributesResponseUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F7F016110036003967DF /* SESGetIdentityNotificationAttributesRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESGetIdentityNotificationAttributesRequest.h; sourceTree = "<group>"; };
+		8C26F7F116110036003967DF /* SESGetIdentityNotificationAttributesRequestMarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESGetIdentityNotificationAttributesRequestMarshaller.h; sourceTree = "<group>"; };
+		8C26F7F216110036003967DF /* SESGetIdentityNotificationAttributesResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESGetIdentityNotificationAttributesResponse.h; sourceTree = "<group>"; };
+		8C26F7F316110036003967DF /* SESGetIdentityNotificationAttributesResponseUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESGetIdentityNotificationAttributesResponseUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F7F416110036003967DF /* SESGetIdentityVerificationAttributesRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESGetIdentityVerificationAttributesRequest.h; sourceTree = "<group>"; };
+		8C26F7F516110036003967DF /* SESGetIdentityVerificationAttributesRequestMarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESGetIdentityVerificationAttributesRequestMarshaller.h; sourceTree = "<group>"; };
+		8C26F7F616110036003967DF /* SESGetIdentityVerificationAttributesResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESGetIdentityVerificationAttributesResponse.h; sourceTree = "<group>"; };
+		8C26F7F716110036003967DF /* SESGetIdentityVerificationAttributesResponseUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESGetIdentityVerificationAttributesResponseUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F7F816110036003967DF /* SESIdentityDkimAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESIdentityDkimAttributes.h; sourceTree = "<group>"; };
+		8C26F7F916110036003967DF /* SESIdentityDkimAttributesUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESIdentityDkimAttributesUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F7FA16110036003967DF /* SESIdentityNotificationAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESIdentityNotificationAttributes.h; sourceTree = "<group>"; };
+		8C26F7FB16110036003967DF /* SESIdentityNotificationAttributesUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESIdentityNotificationAttributesUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F7FC16110036003967DF /* SESIdentityVerificationAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESIdentityVerificationAttributes.h; sourceTree = "<group>"; };
+		8C26F7FD16110036003967DF /* SESIdentityVerificationAttributesUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESIdentityVerificationAttributesUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F7FE16110036003967DF /* SESListIdentitiesRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESListIdentitiesRequest.h; sourceTree = "<group>"; };
+		8C26F7FF16110036003967DF /* SESListIdentitiesRequestMarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESListIdentitiesRequestMarshaller.h; sourceTree = "<group>"; };
+		8C26F80016110036003967DF /* SESListIdentitiesResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESListIdentitiesResponse.h; sourceTree = "<group>"; };
+		8C26F80116110036003967DF /* SESListIdentitiesResponseUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESListIdentitiesResponseUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F80216110036003967DF /* SESSetIdentityDkimEnabledRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESSetIdentityDkimEnabledRequest.h; sourceTree = "<group>"; };
+		8C26F80316110036003967DF /* SESSetIdentityDkimEnabledRequestMarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESSetIdentityDkimEnabledRequestMarshaller.h; sourceTree = "<group>"; };
+		8C26F80416110036003967DF /* SESSetIdentityDkimEnabledResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESSetIdentityDkimEnabledResponse.h; sourceTree = "<group>"; };
+		8C26F80516110036003967DF /* SESSetIdentityDkimEnabledResponseUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESSetIdentityDkimEnabledResponseUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F80616110036003967DF /* SESSetIdentityFeedbackForwardingEnabledRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESSetIdentityFeedbackForwardingEnabledRequest.h; sourceTree = "<group>"; };
+		8C26F80716110036003967DF /* SESSetIdentityFeedbackForwardingEnabledRequestMarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESSetIdentityFeedbackForwardingEnabledRequestMarshaller.h; sourceTree = "<group>"; };
+		8C26F80816110036003967DF /* SESSetIdentityFeedbackForwardingEnabledResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESSetIdentityFeedbackForwardingEnabledResponse.h; sourceTree = "<group>"; };
+		8C26F80916110036003967DF /* SESSetIdentityFeedbackForwardingEnabledResponseUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESSetIdentityFeedbackForwardingEnabledResponseUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F80A16110036003967DF /* SESSetIdentityNotificationTopicRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESSetIdentityNotificationTopicRequest.h; sourceTree = "<group>"; };
+		8C26F80B16110036003967DF /* SESSetIdentityNotificationTopicRequestMarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESSetIdentityNotificationTopicRequestMarshaller.h; sourceTree = "<group>"; };
+		8C26F80C16110036003967DF /* SESSetIdentityNotificationTopicResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESSetIdentityNotificationTopicResponse.h; sourceTree = "<group>"; };
+		8C26F80D16110036003967DF /* SESSetIdentityNotificationTopicResponseUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESSetIdentityNotificationTopicResponseUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F80E16110036003967DF /* SESVerifyDomainDkimRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESVerifyDomainDkimRequest.h; sourceTree = "<group>"; };
+		8C26F80F16110036003967DF /* SESVerifyDomainDkimRequestMarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESVerifyDomainDkimRequestMarshaller.h; sourceTree = "<group>"; };
+		8C26F81016110036003967DF /* SESVerifyDomainDkimResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESVerifyDomainDkimResponse.h; sourceTree = "<group>"; };
+		8C26F81116110036003967DF /* SESVerifyDomainDkimResponseUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESVerifyDomainDkimResponseUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F81216110036003967DF /* SESVerifyDomainIdentityRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESVerifyDomainIdentityRequest.h; sourceTree = "<group>"; };
+		8C26F81316110036003967DF /* SESVerifyDomainIdentityRequestMarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESVerifyDomainIdentityRequestMarshaller.h; sourceTree = "<group>"; };
+		8C26F81416110036003967DF /* SESVerifyDomainIdentityResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESVerifyDomainIdentityResponse.h; sourceTree = "<group>"; };
+		8C26F81516110036003967DF /* SESVerifyDomainIdentityResponseUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESVerifyDomainIdentityResponseUnmarshaller.h; sourceTree = "<group>"; };
+		8C26F81616110036003967DF /* SESVerifyEmailIdentityRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESVerifyEmailIdentityRequest.h; sourceTree = "<group>"; };
+		8C26F81716110036003967DF /* SESVerifyEmailIdentityRequestMarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESVerifyEmailIdentityRequestMarshaller.h; sourceTree = "<group>"; };
+		8C26F81816110036003967DF /* SESVerifyEmailIdentityResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESVerifyEmailIdentityResponse.h; sourceTree = "<group>"; };
+		8C26F81916110036003967DF /* SESVerifyEmailIdentityResponseUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESVerifyEmailIdentityResponseUnmarshaller.h; sourceTree = "<group>"; };
 		8C2A87E715336E12002B56EC /* awscocoasdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = awscocoasdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C2A87EA15336E12002B56EC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		8C2A87ED15336E12002B56EC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -5618,12 +6008,6 @@
 		8C2A930A15336EAF002B56EC /* SecurityTokenServiceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityTokenServiceRequest.h; sourceTree = "<group>"; };
 		8C2A930B15336EAF002B56EC /* SecurityTokenServiceResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityTokenServiceResponse.h; sourceTree = "<group>"; };
 		8C2A930C15336EAF002B56EC /* SecurityTokenServiceResponseUnmarshaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityTokenServiceResponseUnmarshaller.h; sourceTree = "<group>"; };
-		8C2A930E15336EAF002B56EC /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
-		8C2A930F15336EAF002B56EC /* GTMGarbageCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMGarbageCollection.h; sourceTree = "<group>"; };
-		8C2A931015336EAF002B56EC /* GTMLogger+ASL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMLogger+ASL.h"; sourceTree = "<group>"; };
-		8C2A931115336EAF002B56EC /* GTMLogger+ASL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMLogger+ASL.m"; sourceTree = "<group>"; };
-		8C2A931215336EAF002B56EC /* GTMLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMLogger.h; sourceTree = "<group>"; };
-		8C2A931315336EAF002B56EC /* GTMLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMLogger.m; sourceTree = "<group>"; };
 		8C2A931515336EAF002B56EC /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		8C2A931615336EAF002B56EC /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8C2A931715336EAF002B56EC /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -6039,6 +6423,18 @@
 		8C2A890515336EAD002B56EC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8C26F6E81610FE11003967DF /* DynamoDBDeleteRequest.m */,
+				8C26F6E91610FE12003967DF /* DynamoDBDeleteRequestUnmarshaller.m */,
+				8C26F6EA1610FE14003967DF /* DynamoDBPutRequest.m */,
+				8C26F6EB1610FE15003967DF /* DynamoDBPutRequestUnmarshaller.m */,
+				8C26F6EC1610FE16003967DF /* DynamoDBWriteRequest.m */,
+				8C26F6ED1610FE17003967DF /* DynamoDBWriteRequestUnmarshaller.m */,
+				8C26F6C41610FD7B003967DF /* DynamoDBBatchWriteItemRequest.m */,
+				8C26F6C51610FD7C003967DF /* DynamoDBBatchWriteItemRequestMarshaller.m */,
+				8C26F6C61610FD7C003967DF /* DynamoDBBatchWriteItemResponse.m */,
+				8C26F6C71610FD7E003967DF /* DynamoDBBatchWriteItemResponseUnmarshaller.m */,
+				8C26F6C81610FD80003967DF /* DynamoDBBatchWriteResponse.m */,
+				8C26F6C91610FD81003967DF /* DynamoDBBatchWriteResponseUnmarshaller.m */,
 				8C2A890615336EAD002B56EC /* DynamoDBAttributeValue.m */,
 				8C2A890715336EAD002B56EC /* DynamoDBAttributeValueUnmarshaller.m */,
 				8C2A890815336EAD002B56EC /* DynamoDBAttributeValueUpdate.m */,
@@ -6132,6 +6528,31 @@
 		8C2A895515336EAE002B56EC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8C26F7801610FFCE003967DF /* EC2DescribeExportTasksRequest.m */,
+				8C26F7811610FFCE003967DF /* EC2DescribeExportTasksRequestMarshaller.m */,
+				8C26F6F41610FE6A003967DF /* EC2CancelExportTaskRequest.m */,
+				8C26F6F51610FE6A003967DF /* EC2CancelExportTaskRequestMarshaller.m */,
+				8C26F6F61610FE6A003967DF /* EC2CancelExportTaskResponse.m */,
+				8C26F6F71610FE6A003967DF /* EC2CancelExportTaskResponseUnmarshaller.m */,
+				8C26F6F81610FE6A003967DF /* EC2CreateInstanceExportTaskRequest.m */,
+				8C26F6F91610FE6A003967DF /* EC2CreateInstanceExportTaskRequestMarshaller.m */,
+				8C26F6FA1610FE6A003967DF /* EC2CreateInstanceExportTaskResponse.m */,
+				8C26F6FB1610FE6A003967DF /* EC2CreateInstanceExportTaskResponseUnmarshaller.m */,
+				8C26F6FC1610FE6A003967DF /* EC2DescribeExportTasksResponse.m */,
+				8C26F6FD1610FE6A003967DF /* EC2DescribeExportTasksResponseUnmarshaller.m */,
+				8C26F6FE1610FE6A003967DF /* EC2ExportTask.m */,
+				8C26F6FF1610FE6A003967DF /* EC2ExportTaskUnmarshaller.m */,
+				8C26F7001610FE6A003967DF /* EC2ExportToS3Task.m */,
+				8C26F7011610FE6A003967DF /* EC2ExportToS3TaskSpecification.m */,
+				8C26F7021610FE6A003967DF /* EC2ExportToS3TaskUnmarshaller.m */,
+				8C26F7031610FE6A003967DF /* EC2IamInstanceProfile.m */,
+				8C26F7041610FE6A003967DF /* EC2IamInstanceProfileSpecification.m */,
+				8C26F7051610FE6A003967DF /* EC2IamInstanceProfileSpecificationUnmarshaller.m */,
+				8C26F7061610FE6A003967DF /* EC2IamInstanceProfileUnmarshaller.m */,
+				8C26F7071610FE6A003967DF /* EC2InstanceExportDetails.m */,
+				8C26F7081610FE6A003967DF /* EC2InstanceExportDetailsUnmarshaller.m */,
+				8C26F7091610FE6A003967DF /* EC2PrivateIpAddressSpecification.m */,
+				8C26F70A1610FE6A003967DF /* EC2PrivateIpAddressSpecificationUnmarshaller.m */,
 				8C2A895615336EAE002B56EC /* EC2ActivateLicenseRequest.m */,
 				8C2A895715336EAE002B56EC /* EC2ActivateLicenseRequestMarshaller.m */,
 				8C2A895815336EAE002B56EC /* EC2ActivateLicenseResponse.m */,
@@ -6767,6 +7188,7 @@
 		8C2A8BBD15336EAE002B56EC /* Amazon.Runtime */ = {
 			isa = PBXGroup;
 			children = (
+				8C26F6C21610FD2D003967DF /* AmazonErrorHandler.m */,
 				8C2A8BBE15336EAE002B56EC /* AmazonAbstractWebServiceClient.m */,
 				8C2A8BBF15336EAE002B56EC /* AmazonAuthUtils.m */,
 				8C2A8BC015336EAE002B56EC /* AmazonBoolValueUnmarshaller.m */,
@@ -6807,6 +7229,17 @@
 		8C2A8BD815336EAE002B56EC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8C26F76A1610FED8003967DF /* S3BucketTaggingConfiguration.m */,
+				8C26F76B1610FEDA003967DF /* S3BucketTaggingConfigurationUnmarshaller.m */,
+				8C26F76C1610FEDC003967DF /* S3BucketTagSet.m */,
+				8C26F76D1610FEDE003967DF /* S3BucketTagSetUnmarshaller.m */,
+				8C26F76E1610FEE1003967DF /* S3DeleteBucketTaggingRequest.m */,
+				8C26F76F1610FEE2003967DF /* S3DeleteBucketTaggingResponse.m */,
+				8C26F7701610FEE7003967DF /* S3GetBucketTaggingRequest.m */,
+				8C26F7711610FEE9003967DF /* S3GetBucketTaggingResponse.m */,
+				8C26F7721610FEEA003967DF /* S3SetBucketTaggingRequest.m */,
+				8C26F7731610FEEB003967DF /* S3SetBucketTaggingResponse.m */,
+				8C26F7741610FEF6003967DF /* S3UploadInputStream.m */,
 				8C2A8BD915336EAE002B56EC /* BucketWebsiteConfiguration.m */,
 				8C2A8BDA15336EAE002B56EC /* DeletedObject.m */,
 				8C2A8BDB15336EAE002B56EC /* DeleteError.m */,
@@ -6952,6 +7385,56 @@
 		8C2A8C5915336EAE002B56EC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8C26F7841611000A003967DF /* SESDeleteIdentityRequest.m */,
+				8C26F7851611000A003967DF /* SESDeleteIdentityRequestMarshaller.m */,
+				8C26F7861611000A003967DF /* SESDeleteIdentityResponse.m */,
+				8C26F7871611000A003967DF /* SESDeleteIdentityResponseUnmarshaller.m */,
+				8C26F7881611000A003967DF /* SESGetIdentityDkimAttributesRequest.m */,
+				8C26F7891611000A003967DF /* SESGetIdentityDkimAttributesRequestMarshaller.m */,
+				8C26F78A1611000A003967DF /* SESGetIdentityDkimAttributesResponse.m */,
+				8C26F78B1611000A003967DF /* SESGetIdentityDkimAttributesResponseUnmarshaller.m */,
+				8C26F78C1611000A003967DF /* SESGetIdentityNotificationAttributesRequest.m */,
+				8C26F78D1611000A003967DF /* SESGetIdentityNotificationAttributesRequestMarshaller.m */,
+				8C26F78E1611000A003967DF /* SESGetIdentityNotificationAttributesResponse.m */,
+				8C26F78F1611000A003967DF /* SESGetIdentityNotificationAttributesResponseUnmarshaller.m */,
+				8C26F7901611000A003967DF /* SESGetIdentityVerificationAttributesRequest.m */,
+				8C26F7911611000A003967DF /* SESGetIdentityVerificationAttributesRequestMarshaller.m */,
+				8C26F7921611000A003967DF /* SESGetIdentityVerificationAttributesResponse.m */,
+				8C26F7931611000A003967DF /* SESGetIdentityVerificationAttributesResponseUnmarshaller.m */,
+				8C26F7941611000A003967DF /* SESIdentityDkimAttributes.m */,
+				8C26F7951611000A003967DF /* SESIdentityDkimAttributesUnmarshaller.m */,
+				8C26F7961611000A003967DF /* SESIdentityNotificationAttributes.m */,
+				8C26F7971611000A003967DF /* SESIdentityNotificationAttributesUnmarshaller.m */,
+				8C26F7981611000A003967DF /* SESIdentityVerificationAttributes.m */,
+				8C26F7991611000A003967DF /* SESIdentityVerificationAttributesUnmarshaller.m */,
+				8C26F79A1611000A003967DF /* SESListIdentitiesRequest.m */,
+				8C26F79B1611000A003967DF /* SESListIdentitiesRequestMarshaller.m */,
+				8C26F79C1611000A003967DF /* SESListIdentitiesResponse.m */,
+				8C26F79D1611000A003967DF /* SESListIdentitiesResponseUnmarshaller.m */,
+				8C26F79E1611000A003967DF /* SESSetIdentityDkimEnabledRequest.m */,
+				8C26F79F1611000A003967DF /* SESSetIdentityDkimEnabledRequestMarshaller.m */,
+				8C26F7A01611000A003967DF /* SESSetIdentityDkimEnabledResponse.m */,
+				8C26F7A11611000A003967DF /* SESSetIdentityDkimEnabledResponseUnmarshaller.m */,
+				8C26F7A21611000A003967DF /* SESSetIdentityFeedbackForwardingEnabledRequest.m */,
+				8C26F7A31611000A003967DF /* SESSetIdentityFeedbackForwardingEnabledRequestMarshaller.m */,
+				8C26F7A41611000A003967DF /* SESSetIdentityFeedbackForwardingEnabledResponse.m */,
+				8C26F7A51611000A003967DF /* SESSetIdentityFeedbackForwardingEnabledResponseUnmarshaller.m */,
+				8C26F7A61611000A003967DF /* SESSetIdentityNotificationTopicRequest.m */,
+				8C26F7A71611000A003967DF /* SESSetIdentityNotificationTopicRequestMarshaller.m */,
+				8C26F7A81611000A003967DF /* SESSetIdentityNotificationTopicResponse.m */,
+				8C26F7A91611000A003967DF /* SESSetIdentityNotificationTopicResponseUnmarshaller.m */,
+				8C26F7AA1611000A003967DF /* SESVerifyDomainDkimRequest.m */,
+				8C26F7AB1611000A003967DF /* SESVerifyDomainDkimRequestMarshaller.m */,
+				8C26F7AC1611000A003967DF /* SESVerifyDomainDkimResponse.m */,
+				8C26F7AD1611000A003967DF /* SESVerifyDomainDkimResponseUnmarshaller.m */,
+				8C26F7AE1611000A003967DF /* SESVerifyDomainIdentityRequest.m */,
+				8C26F7AF1611000A003967DF /* SESVerifyDomainIdentityRequestMarshaller.m */,
+				8C26F7B01611000A003967DF /* SESVerifyDomainIdentityResponse.m */,
+				8C26F7B11611000A003967DF /* SESVerifyDomainIdentityResponseUnmarshaller.m */,
+				8C26F7B21611000A003967DF /* SESVerifyEmailIdentityRequest.m */,
+				8C26F7B31611000A003967DF /* SESVerifyEmailIdentityRequestMarshaller.m */,
+				8C26F7B41611000A003967DF /* SESVerifyEmailIdentityResponse.m */,
+				8C26F7B51611000A003967DF /* SESVerifyEmailIdentityResponseUnmarshaller.m */,
 				8C2A8C5A15336EAE002B56EC /* SESBody.m */,
 				8C2A8C5B15336EAE002B56EC /* SESContent.m */,
 				8C2A8C5C15336EAE002B56EC /* SESDeleteVerifiedEmailAddressRequest.m */,
@@ -7307,6 +7790,7 @@
 		8C2A8D9015336EAE002B56EC /* include */ = {
 			isa = PBXGroup;
 			children = (
+				8C26F6BF1610FA6F003967DF /* AmazonErrorHandler.h */,
 				8C2A8D9115336EAE002B56EC /* AmazonAbstractWebServiceClient.h */,
 				8C2A8D9215336EAE002B56EC /* AmazonAuthUtils.h */,
 				8C2A8D9315336EAE002B56EC /* AmazonBoolValueUnmarshaller.h */,
@@ -7613,6 +8097,18 @@
 		8C2A8EA515336EAF002B56EC /* DynamoDB */ = {
 			isa = PBXGroup;
 			children = (
+				8C26F6DC1610FDFA003967DF /* DynamoDBDeleteRequest.h */,
+				8C26F6DD1610FDFA003967DF /* DynamoDBDeleteRequestUnmarshaller.h */,
+				8C26F6DE1610FDFA003967DF /* DynamoDBPutRequest.h */,
+				8C26F6DF1610FDFA003967DF /* DynamoDBPutRequestUnmarshaller.h */,
+				8C26F6E01610FDFA003967DF /* DynamoDBWriteRequest.h */,
+				8C26F6E11610FDFA003967DF /* DynamoDBWriteRequestUnmarshaller.h */,
+				8C26F6D01610FDAB003967DF /* DynamoDBBatchWriteItemRequest.h */,
+				8C26F6D11610FDAB003967DF /* DynamoDBBatchWriteItemRequestMarshaller.h */,
+				8C26F6D21610FDAB003967DF /* DynamoDBBatchWriteItemResponse.h */,
+				8C26F6D31610FDAB003967DF /* DynamoDBBatchWriteItemResponseUnmarshaller.h */,
+				8C26F6D41610FDAB003967DF /* DynamoDBBatchWriteResponse.h */,
+				8C26F6D51610FDAB003967DF /* DynamoDBBatchWriteResponseUnmarshaller.h */,
 				8C2A8EA615336EAF002B56EC /* AmazonDynamoDBClient.h */,
 				8C2A8EA715336EAF002B56EC /* DynamoDBAttributeValue.h */,
 				8C2A8EA815336EAF002B56EC /* DynamoDBAttributeValueUnmarshaller.h */,
@@ -7700,6 +8196,31 @@
 		8C2A8EF615336EAF002B56EC /* EC2 */ = {
 			isa = PBXGroup;
 			children = (
+				8C26F7221610FE9F003967DF /* EC2CancelExportTaskRequest.h */,
+				8C26F7231610FE9F003967DF /* EC2CancelExportTaskRequestMarshaller.h */,
+				8C26F7241610FE9F003967DF /* EC2CancelExportTaskResponse.h */,
+				8C26F7251610FE9F003967DF /* EC2CancelExportTaskResponseUnmarshaller.h */,
+				8C26F7261610FE9F003967DF /* EC2CreateInstanceExportTaskRequest.h */,
+				8C26F7271610FE9F003967DF /* EC2CreateInstanceExportTaskRequestMarshaller.h */,
+				8C26F7281610FE9F003967DF /* EC2CreateInstanceExportTaskResponse.h */,
+				8C26F7291610FE9F003967DF /* EC2CreateInstanceExportTaskResponseUnmarshaller.h */,
+				8C26F72A1610FE9F003967DF /* EC2DescribeExportTasksRequest.h */,
+				8C26F72B1610FE9F003967DF /* EC2DescribeExportTasksRequestMarshaller.h */,
+				8C26F72C1610FE9F003967DF /* EC2DescribeExportTasksResponse.h */,
+				8C26F72D1610FE9F003967DF /* EC2DescribeExportTasksResponseUnmarshaller.h */,
+				8C26F72E1610FE9F003967DF /* EC2ExportTask.h */,
+				8C26F72F1610FE9F003967DF /* EC2ExportTaskUnmarshaller.h */,
+				8C26F7301610FE9F003967DF /* EC2ExportToS3Task.h */,
+				8C26F7311610FE9F003967DF /* EC2ExportToS3TaskSpecification.h */,
+				8C26F7321610FE9F003967DF /* EC2ExportToS3TaskUnmarshaller.h */,
+				8C26F7331610FE9F003967DF /* EC2IamInstanceProfile.h */,
+				8C26F7341610FE9F003967DF /* EC2IamInstanceProfileSpecification.h */,
+				8C26F7351610FE9F003967DF /* EC2IamInstanceProfileSpecificationUnmarshaller.h */,
+				8C26F7361610FE9F003967DF /* EC2IamInstanceProfileUnmarshaller.h */,
+				8C26F7371610FE9F003967DF /* EC2InstanceExportDetails.h */,
+				8C26F7381610FE9F003967DF /* EC2InstanceExportDetailsUnmarshaller.h */,
+				8C26F7391610FE9F003967DF /* EC2PrivateIpAddressSpecification.h */,
+				8C26F73A1610FE9F003967DF /* EC2PrivateIpAddressSpecificationUnmarshaller.h */,
 				8C2A8EF715336EAF002B56EC /* AmazonEC2Client.h */,
 				8C2A8EF815336EAF002B56EC /* EC2ActivateLicenseRequest.h */,
 				8C2A8EF915336EAF002B56EC /* EC2ActivateLicenseRequestMarshaller.h */,
@@ -8331,6 +8852,17 @@
 		8C2A916115336EAF002B56EC /* S3 */ = {
 			isa = PBXGroup;
 			children = (
+				8C26F7541610FEBA003967DF /* S3BucketTaggingConfiguration.h */,
+				8C26F7551610FEBA003967DF /* S3BucketTaggingConfigurationUnmarshaller.h */,
+				8C26F7561610FEBA003967DF /* S3BucketTagSet.h */,
+				8C26F7571610FEBB003967DF /* S3BucketTagSetUnmarshaller.h */,
+				8C26F7581610FEBB003967DF /* S3DeleteBucketTaggingRequest.h */,
+				8C26F7591610FEBC003967DF /* S3DeleteBucketTaggingResponse.h */,
+				8C26F75A1610FEBC003967DF /* S3GetBucketTaggingRequest.h */,
+				8C26F75B1610FEBD003967DF /* S3GetBucketTaggingResponse.h */,
+				8C26F75C1610FEBD003967DF /* S3SetBucketTaggingRequest.h */,
+				8C26F75D1610FEBD003967DF /* S3SetBucketTaggingResponse.h */,
+				8C26F75E1610FEBE003967DF /* S3UploadInputStream.h */,
 				8C2A916215336EAF002B56EC /* AmazonS3Client.h */,
 				8C2A916315336EAF002B56EC /* BucketWebsiteConfiguration.h */,
 				8C2A916415336EAF002B56EC /* DeletedObject.h */,
@@ -8468,6 +9000,56 @@
 		8C2A91E415336EAF002B56EC /* SES */ = {
 			isa = PBXGroup;
 			children = (
+				8C26F7E816110036003967DF /* SESDeleteIdentityRequest.h */,
+				8C26F7E916110036003967DF /* SESDeleteIdentityRequestMarshaller.h */,
+				8C26F7EA16110036003967DF /* SESDeleteIdentityResponse.h */,
+				8C26F7EB16110036003967DF /* SESDeleteIdentityResponseUnmarshaller.h */,
+				8C26F7EC16110036003967DF /* SESGetIdentityDkimAttributesRequest.h */,
+				8C26F7ED16110036003967DF /* SESGetIdentityDkimAttributesRequestMarshaller.h */,
+				8C26F7EE16110036003967DF /* SESGetIdentityDkimAttributesResponse.h */,
+				8C26F7EF16110036003967DF /* SESGetIdentityDkimAttributesResponseUnmarshaller.h */,
+				8C26F7F016110036003967DF /* SESGetIdentityNotificationAttributesRequest.h */,
+				8C26F7F116110036003967DF /* SESGetIdentityNotificationAttributesRequestMarshaller.h */,
+				8C26F7F216110036003967DF /* SESGetIdentityNotificationAttributesResponse.h */,
+				8C26F7F316110036003967DF /* SESGetIdentityNotificationAttributesResponseUnmarshaller.h */,
+				8C26F7F416110036003967DF /* SESGetIdentityVerificationAttributesRequest.h */,
+				8C26F7F516110036003967DF /* SESGetIdentityVerificationAttributesRequestMarshaller.h */,
+				8C26F7F616110036003967DF /* SESGetIdentityVerificationAttributesResponse.h */,
+				8C26F7F716110036003967DF /* SESGetIdentityVerificationAttributesResponseUnmarshaller.h */,
+				8C26F7F816110036003967DF /* SESIdentityDkimAttributes.h */,
+				8C26F7F916110036003967DF /* SESIdentityDkimAttributesUnmarshaller.h */,
+				8C26F7FA16110036003967DF /* SESIdentityNotificationAttributes.h */,
+				8C26F7FB16110036003967DF /* SESIdentityNotificationAttributesUnmarshaller.h */,
+				8C26F7FC16110036003967DF /* SESIdentityVerificationAttributes.h */,
+				8C26F7FD16110036003967DF /* SESIdentityVerificationAttributesUnmarshaller.h */,
+				8C26F7FE16110036003967DF /* SESListIdentitiesRequest.h */,
+				8C26F7FF16110036003967DF /* SESListIdentitiesRequestMarshaller.h */,
+				8C26F80016110036003967DF /* SESListIdentitiesResponse.h */,
+				8C26F80116110036003967DF /* SESListIdentitiesResponseUnmarshaller.h */,
+				8C26F80216110036003967DF /* SESSetIdentityDkimEnabledRequest.h */,
+				8C26F80316110036003967DF /* SESSetIdentityDkimEnabledRequestMarshaller.h */,
+				8C26F80416110036003967DF /* SESSetIdentityDkimEnabledResponse.h */,
+				8C26F80516110036003967DF /* SESSetIdentityDkimEnabledResponseUnmarshaller.h */,
+				8C26F80616110036003967DF /* SESSetIdentityFeedbackForwardingEnabledRequest.h */,
+				8C26F80716110036003967DF /* SESSetIdentityFeedbackForwardingEnabledRequestMarshaller.h */,
+				8C26F80816110036003967DF /* SESSetIdentityFeedbackForwardingEnabledResponse.h */,
+				8C26F80916110036003967DF /* SESSetIdentityFeedbackForwardingEnabledResponseUnmarshaller.h */,
+				8C26F80A16110036003967DF /* SESSetIdentityNotificationTopicRequest.h */,
+				8C26F80B16110036003967DF /* SESSetIdentityNotificationTopicRequestMarshaller.h */,
+				8C26F80C16110036003967DF /* SESSetIdentityNotificationTopicResponse.h */,
+				8C26F80D16110036003967DF /* SESSetIdentityNotificationTopicResponseUnmarshaller.h */,
+				8C26F80E16110036003967DF /* SESVerifyDomainDkimRequest.h */,
+				8C26F80F16110036003967DF /* SESVerifyDomainDkimRequestMarshaller.h */,
+				8C26F81016110036003967DF /* SESVerifyDomainDkimResponse.h */,
+				8C26F81116110036003967DF /* SESVerifyDomainDkimResponseUnmarshaller.h */,
+				8C26F81216110036003967DF /* SESVerifyDomainIdentityRequest.h */,
+				8C26F81316110036003967DF /* SESVerifyDomainIdentityRequestMarshaller.h */,
+				8C26F81416110036003967DF /* SESVerifyDomainIdentityResponse.h */,
+				8C26F81516110036003967DF /* SESVerifyDomainIdentityResponseUnmarshaller.h */,
+				8C26F81616110036003967DF /* SESVerifyEmailIdentityRequest.h */,
+				8C26F81716110036003967DF /* SESVerifyEmailIdentityRequestMarshaller.h */,
+				8C26F81816110036003967DF /* SESVerifyEmailIdentityResponse.h */,
+				8C26F81916110036003967DF /* SESVerifyEmailIdentityResponseUnmarshaller.h */,
 				8C2A91E515336EAF002B56EC /* AmazonSESClient.h */,
 				8C2A91E615336EAF002B56EC /* SESBody.h */,
 				8C2A91E715336EAF002B56EC /* SESContent.h */,
@@ -8795,12 +9377,6 @@
 		8C2A930D15336EAF002B56EC /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				8C2A930E15336EAF002B56EC /* GTMDefines.h */,
-				8C2A930F15336EAF002B56EC /* GTMGarbageCollection.h */,
-				8C2A931015336EAF002B56EC /* GTMLogger+ASL.h */,
-				8C2A931115336EAF002B56EC /* GTMLogger+ASL.m */,
-				8C2A931215336EAF002B56EC /* GTMLogger.h */,
-				8C2A931315336EAF002B56EC /* GTMLogger.m */,
 				8C2A931415336EAF002B56EC /* JSON */,
 				8C2A932E15336EAF002B56EC /* LICENSE-2.0.txt */,
 			);
@@ -8851,6 +9427,7 @@
 				8C2A98A415336EB1002B56EC /* AmazonBoolValueUnmarshaller.h in Headers */,
 				8C2A98A515336EB1002B56EC /* AmazonClientException.h in Headers */,
 				8C2A98A615336EB1002B56EC /* AmazonCredentials.h in Headers */,
+				8C26F6C01610FA6F003967DF /* AmazonErrorHandler.h in Headers */,
 				8C2A98A715336EB1002B56EC /* AmazonDictionaryUnmarshaller.h in Headers */,
 				8C2A98A815336EB1002B56EC /* AmazonEndpoints.h in Headers */,
 				8C2A98A915336EB1002B56EC /* AmazonJSON.h in Headers */,
@@ -10239,10 +10816,104 @@
 				8C2A9E1015336EB2002B56EC /* SecurityTokenServiceRequest.h in Headers */,
 				8C2A9E1115336EB2002B56EC /* SecurityTokenServiceResponse.h in Headers */,
 				8C2A9E1215336EB2002B56EC /* SecurityTokenServiceResponseUnmarshaller.h in Headers */,
-				8C2A9E1315336EB2002B56EC /* GTMDefines.h in Headers */,
-				8C2A9E1415336EB2002B56EC /* GTMGarbageCollection.h in Headers */,
-				8C2A9E1515336EB2002B56EC /* GTMLogger+ASL.h in Headers */,
-				8C2A9E1715336EB2002B56EC /* GTMLogger.h in Headers */,
+				8C26F6D61610FDAB003967DF /* DynamoDBBatchWriteItemRequest.h in Headers */,
+				8C26F6D71610FDAB003967DF /* DynamoDBBatchWriteItemRequestMarshaller.h in Headers */,
+				8C26F6D81610FDAB003967DF /* DynamoDBBatchWriteItemResponse.h in Headers */,
+				8C26F6D91610FDAB003967DF /* DynamoDBBatchWriteItemResponseUnmarshaller.h in Headers */,
+				8C26F6DA1610FDAB003967DF /* DynamoDBBatchWriteResponse.h in Headers */,
+				8C26F6DB1610FDAB003967DF /* DynamoDBBatchWriteResponseUnmarshaller.h in Headers */,
+				8C26F6E21610FDFA003967DF /* DynamoDBDeleteRequest.h in Headers */,
+				8C26F6E31610FDFA003967DF /* DynamoDBDeleteRequestUnmarshaller.h in Headers */,
+				8C26F6E41610FDFA003967DF /* DynamoDBPutRequest.h in Headers */,
+				8C26F6E51610FDFA003967DF /* DynamoDBPutRequestUnmarshaller.h in Headers */,
+				8C26F6E61610FDFA003967DF /* DynamoDBWriteRequest.h in Headers */,
+				8C26F6E71610FDFA003967DF /* DynamoDBWriteRequestUnmarshaller.h in Headers */,
+				8C26F73B1610FE9F003967DF /* EC2CancelExportTaskRequest.h in Headers */,
+				8C26F73C1610FE9F003967DF /* EC2CancelExportTaskRequestMarshaller.h in Headers */,
+				8C26F73D1610FE9F003967DF /* EC2CancelExportTaskResponse.h in Headers */,
+				8C26F73E1610FE9F003967DF /* EC2CancelExportTaskResponseUnmarshaller.h in Headers */,
+				8C26F73F1610FE9F003967DF /* EC2CreateInstanceExportTaskRequest.h in Headers */,
+				8C26F7401610FE9F003967DF /* EC2CreateInstanceExportTaskRequestMarshaller.h in Headers */,
+				8C26F7411610FE9F003967DF /* EC2CreateInstanceExportTaskResponse.h in Headers */,
+				8C26F7421610FE9F003967DF /* EC2CreateInstanceExportTaskResponseUnmarshaller.h in Headers */,
+				8C26F7431610FE9F003967DF /* EC2DescribeExportTasksRequest.h in Headers */,
+				8C26F7441610FE9F003967DF /* EC2DescribeExportTasksRequestMarshaller.h in Headers */,
+				8C26F7451610FE9F003967DF /* EC2DescribeExportTasksResponse.h in Headers */,
+				8C26F7461610FE9F003967DF /* EC2DescribeExportTasksResponseUnmarshaller.h in Headers */,
+				8C26F7471610FE9F003967DF /* EC2ExportTask.h in Headers */,
+				8C26F7481610FE9F003967DF /* EC2ExportTaskUnmarshaller.h in Headers */,
+				8C26F7491610FE9F003967DF /* EC2ExportToS3Task.h in Headers */,
+				8C26F74A1610FE9F003967DF /* EC2ExportToS3TaskSpecification.h in Headers */,
+				8C26F74B1610FE9F003967DF /* EC2ExportToS3TaskUnmarshaller.h in Headers */,
+				8C26F74C1610FE9F003967DF /* EC2IamInstanceProfile.h in Headers */,
+				8C26F74D1610FE9F003967DF /* EC2IamInstanceProfileSpecification.h in Headers */,
+				8C26F74E1610FE9F003967DF /* EC2IamInstanceProfileSpecificationUnmarshaller.h in Headers */,
+				8C26F74F1610FE9F003967DF /* EC2IamInstanceProfileUnmarshaller.h in Headers */,
+				8C26F7501610FE9F003967DF /* EC2InstanceExportDetails.h in Headers */,
+				8C26F7511610FE9F003967DF /* EC2InstanceExportDetailsUnmarshaller.h in Headers */,
+				8C26F7521610FE9F003967DF /* EC2PrivateIpAddressSpecification.h in Headers */,
+				8C26F7531610FE9F003967DF /* EC2PrivateIpAddressSpecificationUnmarshaller.h in Headers */,
+				8C26F75F1610FEBE003967DF /* S3BucketTaggingConfiguration.h in Headers */,
+				8C26F7601610FEBE003967DF /* S3BucketTaggingConfigurationUnmarshaller.h in Headers */,
+				8C26F7611610FEBE003967DF /* S3BucketTagSet.h in Headers */,
+				8C26F7621610FEBE003967DF /* S3BucketTagSetUnmarshaller.h in Headers */,
+				8C26F7631610FEBE003967DF /* S3DeleteBucketTaggingRequest.h in Headers */,
+				8C26F7641610FEBE003967DF /* S3DeleteBucketTaggingResponse.h in Headers */,
+				8C26F7651610FEBE003967DF /* S3GetBucketTaggingRequest.h in Headers */,
+				8C26F7661610FEBE003967DF /* S3GetBucketTaggingResponse.h in Headers */,
+				8C26F7671610FEBE003967DF /* S3SetBucketTaggingRequest.h in Headers */,
+				8C26F7681610FEBE003967DF /* S3SetBucketTaggingResponse.h in Headers */,
+				8C26F7691610FEBE003967DF /* S3UploadInputStream.h in Headers */,
+				8C26F81A16110036003967DF /* SESDeleteIdentityRequest.h in Headers */,
+				8C26F81B16110036003967DF /* SESDeleteIdentityRequestMarshaller.h in Headers */,
+				8C26F81C16110036003967DF /* SESDeleteIdentityResponse.h in Headers */,
+				8C26F81D16110036003967DF /* SESDeleteIdentityResponseUnmarshaller.h in Headers */,
+				8C26F81E16110036003967DF /* SESGetIdentityDkimAttributesRequest.h in Headers */,
+				8C26F81F16110036003967DF /* SESGetIdentityDkimAttributesRequestMarshaller.h in Headers */,
+				8C26F82016110036003967DF /* SESGetIdentityDkimAttributesResponse.h in Headers */,
+				8C26F82116110036003967DF /* SESGetIdentityDkimAttributesResponseUnmarshaller.h in Headers */,
+				8C26F82216110036003967DF /* SESGetIdentityNotificationAttributesRequest.h in Headers */,
+				8C26F82316110036003967DF /* SESGetIdentityNotificationAttributesRequestMarshaller.h in Headers */,
+				8C26F82416110036003967DF /* SESGetIdentityNotificationAttributesResponse.h in Headers */,
+				8C26F82516110036003967DF /* SESGetIdentityNotificationAttributesResponseUnmarshaller.h in Headers */,
+				8C26F82616110036003967DF /* SESGetIdentityVerificationAttributesRequest.h in Headers */,
+				8C26F82716110036003967DF /* SESGetIdentityVerificationAttributesRequestMarshaller.h in Headers */,
+				8C26F82816110036003967DF /* SESGetIdentityVerificationAttributesResponse.h in Headers */,
+				8C26F82916110036003967DF /* SESGetIdentityVerificationAttributesResponseUnmarshaller.h in Headers */,
+				8C26F82A16110036003967DF /* SESIdentityDkimAttributes.h in Headers */,
+				8C26F82B16110036003967DF /* SESIdentityDkimAttributesUnmarshaller.h in Headers */,
+				8C26F82C16110036003967DF /* SESIdentityNotificationAttributes.h in Headers */,
+				8C26F82D16110036003967DF /* SESIdentityNotificationAttributesUnmarshaller.h in Headers */,
+				8C26F82E16110036003967DF /* SESIdentityVerificationAttributes.h in Headers */,
+				8C26F82F16110036003967DF /* SESIdentityVerificationAttributesUnmarshaller.h in Headers */,
+				8C26F83016110036003967DF /* SESListIdentitiesRequest.h in Headers */,
+				8C26F83116110036003967DF /* SESListIdentitiesRequestMarshaller.h in Headers */,
+				8C26F83216110036003967DF /* SESListIdentitiesResponse.h in Headers */,
+				8C26F83316110036003967DF /* SESListIdentitiesResponseUnmarshaller.h in Headers */,
+				8C26F83416110036003967DF /* SESSetIdentityDkimEnabledRequest.h in Headers */,
+				8C26F83516110036003967DF /* SESSetIdentityDkimEnabledRequestMarshaller.h in Headers */,
+				8C26F83616110036003967DF /* SESSetIdentityDkimEnabledResponse.h in Headers */,
+				8C26F83716110036003967DF /* SESSetIdentityDkimEnabledResponseUnmarshaller.h in Headers */,
+				8C26F83816110036003967DF /* SESSetIdentityFeedbackForwardingEnabledRequest.h in Headers */,
+				8C26F83916110036003967DF /* SESSetIdentityFeedbackForwardingEnabledRequestMarshaller.h in Headers */,
+				8C26F83A16110036003967DF /* SESSetIdentityFeedbackForwardingEnabledResponse.h in Headers */,
+				8C26F83B16110036003967DF /* SESSetIdentityFeedbackForwardingEnabledResponseUnmarshaller.h in Headers */,
+				8C26F83C16110036003967DF /* SESSetIdentityNotificationTopicRequest.h in Headers */,
+				8C26F83D16110036003967DF /* SESSetIdentityNotificationTopicRequestMarshaller.h in Headers */,
+				8C26F83E16110036003967DF /* SESSetIdentityNotificationTopicResponse.h in Headers */,
+				8C26F83F16110036003967DF /* SESSetIdentityNotificationTopicResponseUnmarshaller.h in Headers */,
+				8C26F84016110036003967DF /* SESVerifyDomainDkimRequest.h in Headers */,
+				8C26F84116110036003967DF /* SESVerifyDomainDkimRequestMarshaller.h in Headers */,
+				8C26F84216110036003967DF /* SESVerifyDomainDkimResponse.h in Headers */,
+				8C26F84316110036003967DF /* SESVerifyDomainDkimResponseUnmarshaller.h in Headers */,
+				8C26F84416110036003967DF /* SESVerifyDomainIdentityRequest.h in Headers */,
+				8C26F84516110036003967DF /* SESVerifyDomainIdentityRequestMarshaller.h in Headers */,
+				8C26F84616110036003967DF /* SESVerifyDomainIdentityResponse.h in Headers */,
+				8C26F84716110036003967DF /* SESVerifyDomainIdentityResponseUnmarshaller.h in Headers */,
+				8C26F84816110036003967DF /* SESVerifyEmailIdentityRequest.h in Headers */,
+				8C26F84916110036003967DF /* SESVerifyEmailIdentityRequestMarshaller.h in Headers */,
+				8C26F84A16110036003967DF /* SESVerifyEmailIdentityResponse.h in Headers */,
+				8C26F84B16110036003967DF /* SESVerifyEmailIdentityResponseUnmarshaller.h in Headers */,
 				8C2A9E1915336EB2002B56EC /* JSON.h in Headers */,
 				8C2A9E1B15336EB2002B56EC /* SBJson.h in Headers */,
 				8C2A9E1C15336EB2002B56EC /* SBJsonParser.h in Headers */,
@@ -10286,7 +10957,7 @@
 		8C2A87DD15336E12002B56EC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = Hudl;
 			};
 			buildConfigurationList = 8C2A87E015336E12002B56EC /* Build configuration list for PBXProject "awscocoasdk" */;
@@ -11714,8 +12385,6 @@
 				8C2A989A15336EB1002B56EC /* SecurityTokenServiceRequest.m in Sources */,
 				8C2A989B15336EB1002B56EC /* SecurityTokenServiceResponse.m in Sources */,
 				8C2A989C15336EB1002B56EC /* SecurityTokenServiceResponseUnmarshaller.m in Sources */,
-				8C2A9E1615336EB2002B56EC /* GTMLogger+ASL.m in Sources */,
-				8C2A9E1815336EB2002B56EC /* GTMLogger.m in Sources */,
 				8C2A9E1D15336EB2002B56EC /* SBJsonParser.m in Sources */,
 				8C2A9E1F15336EB2002B56EC /* SBJsonStreamParser.m in Sources */,
 				8C2A9E2115336EB2002B56EC /* SBJsonStreamParserAccumulator.m in Sources */,
@@ -11727,6 +12396,105 @@
 				8C2A9E2D15336EB2002B56EC /* SBJsonTokeniser.m in Sources */,
 				8C2A9E2F15336EB2002B56EC /* SBJsonUTF8Stream.m in Sources */,
 				8C2A9E3115336EB2002B56EC /* SBJsonWriter.m in Sources */,
+				8C26F6C31610FD2D003967DF /* AmazonErrorHandler.m in Sources */,
+				8C26F6CA1610FD82003967DF /* DynamoDBBatchWriteItemRequest.m in Sources */,
+				8C26F6CB1610FD82003967DF /* DynamoDBBatchWriteItemRequestMarshaller.m in Sources */,
+				8C26F6CC1610FD82003967DF /* DynamoDBBatchWriteItemResponse.m in Sources */,
+				8C26F6CD1610FD82003967DF /* DynamoDBBatchWriteItemResponseUnmarshaller.m in Sources */,
+				8C26F6CE1610FD82003967DF /* DynamoDBBatchWriteResponse.m in Sources */,
+				8C26F6CF1610FD82003967DF /* DynamoDBBatchWriteResponseUnmarshaller.m in Sources */,
+				8C26F6EE1610FE17003967DF /* DynamoDBDeleteRequest.m in Sources */,
+				8C26F6EF1610FE17003967DF /* DynamoDBDeleteRequestUnmarshaller.m in Sources */,
+				8C26F6F01610FE17003967DF /* DynamoDBPutRequest.m in Sources */,
+				8C26F6F11610FE17003967DF /* DynamoDBPutRequestUnmarshaller.m in Sources */,
+				8C26F6F21610FE17003967DF /* DynamoDBWriteRequest.m in Sources */,
+				8C26F6F31610FE17003967DF /* DynamoDBWriteRequestUnmarshaller.m in Sources */,
+				8C26F70B1610FE6A003967DF /* EC2CancelExportTaskRequest.m in Sources */,
+				8C26F70C1610FE6A003967DF /* EC2CancelExportTaskRequestMarshaller.m in Sources */,
+				8C26F70D1610FE6A003967DF /* EC2CancelExportTaskResponse.m in Sources */,
+				8C26F70E1610FE6A003967DF /* EC2CancelExportTaskResponseUnmarshaller.m in Sources */,
+				8C26F70F1610FE6A003967DF /* EC2CreateInstanceExportTaskRequest.m in Sources */,
+				8C26F7101610FE6A003967DF /* EC2CreateInstanceExportTaskRequestMarshaller.m in Sources */,
+				8C26F7111610FE6A003967DF /* EC2CreateInstanceExportTaskResponse.m in Sources */,
+				8C26F7121610FE6A003967DF /* EC2CreateInstanceExportTaskResponseUnmarshaller.m in Sources */,
+				8C26F7131610FE6A003967DF /* EC2DescribeExportTasksResponse.m in Sources */,
+				8C26F7141610FE6A003967DF /* EC2DescribeExportTasksResponseUnmarshaller.m in Sources */,
+				8C26F7151610FE6A003967DF /* EC2ExportTask.m in Sources */,
+				8C26F7161610FE6A003967DF /* EC2ExportTaskUnmarshaller.m in Sources */,
+				8C26F7171610FE6A003967DF /* EC2ExportToS3Task.m in Sources */,
+				8C26F7181610FE6A003967DF /* EC2ExportToS3TaskSpecification.m in Sources */,
+				8C26F7191610FE6A003967DF /* EC2ExportToS3TaskUnmarshaller.m in Sources */,
+				8C26F71A1610FE6A003967DF /* EC2IamInstanceProfile.m in Sources */,
+				8C26F71B1610FE6A003967DF /* EC2IamInstanceProfileSpecification.m in Sources */,
+				8C26F71C1610FE6A003967DF /* EC2IamInstanceProfileSpecificationUnmarshaller.m in Sources */,
+				8C26F71D1610FE6A003967DF /* EC2IamInstanceProfileUnmarshaller.m in Sources */,
+				8C26F71E1610FE6A003967DF /* EC2InstanceExportDetails.m in Sources */,
+				8C26F71F1610FE6A003967DF /* EC2InstanceExportDetailsUnmarshaller.m in Sources */,
+				8C26F7201610FE6A003967DF /* EC2PrivateIpAddressSpecification.m in Sources */,
+				8C26F7211610FE6A003967DF /* EC2PrivateIpAddressSpecificationUnmarshaller.m in Sources */,
+				8C26F7751610FEF7003967DF /* S3BucketTaggingConfiguration.m in Sources */,
+				8C26F7761610FEF7003967DF /* S3BucketTaggingConfigurationUnmarshaller.m in Sources */,
+				8C26F7771610FEF7003967DF /* S3BucketTagSet.m in Sources */,
+				8C26F7781610FEF7003967DF /* S3BucketTagSetUnmarshaller.m in Sources */,
+				8C26F7791610FEF7003967DF /* S3DeleteBucketTaggingRequest.m in Sources */,
+				8C26F77A1610FEF7003967DF /* S3DeleteBucketTaggingResponse.m in Sources */,
+				8C26F77B1610FEF7003967DF /* S3GetBucketTaggingRequest.m in Sources */,
+				8C26F77C1610FEF7003967DF /* S3GetBucketTaggingResponse.m in Sources */,
+				8C26F77D1610FEF7003967DF /* S3SetBucketTaggingRequest.m in Sources */,
+				8C26F77E1610FEF7003967DF /* S3SetBucketTaggingResponse.m in Sources */,
+				8C26F77F1610FEF7003967DF /* S3UploadInputStream.m in Sources */,
+				8C26F7821610FFCE003967DF /* EC2DescribeExportTasksRequest.m in Sources */,
+				8C26F7831610FFCE003967DF /* EC2DescribeExportTasksRequestMarshaller.m in Sources */,
+				8C26F7B61611000A003967DF /* SESDeleteIdentityRequest.m in Sources */,
+				8C26F7B71611000A003967DF /* SESDeleteIdentityRequestMarshaller.m in Sources */,
+				8C26F7B81611000A003967DF /* SESDeleteIdentityResponse.m in Sources */,
+				8C26F7B91611000A003967DF /* SESDeleteIdentityResponseUnmarshaller.m in Sources */,
+				8C26F7BA1611000A003967DF /* SESGetIdentityDkimAttributesRequest.m in Sources */,
+				8C26F7BB1611000A003967DF /* SESGetIdentityDkimAttributesRequestMarshaller.m in Sources */,
+				8C26F7BC1611000A003967DF /* SESGetIdentityDkimAttributesResponse.m in Sources */,
+				8C26F7BD1611000A003967DF /* SESGetIdentityDkimAttributesResponseUnmarshaller.m in Sources */,
+				8C26F7BE1611000A003967DF /* SESGetIdentityNotificationAttributesRequest.m in Sources */,
+				8C26F7BF1611000A003967DF /* SESGetIdentityNotificationAttributesRequestMarshaller.m in Sources */,
+				8C26F7C01611000A003967DF /* SESGetIdentityNotificationAttributesResponse.m in Sources */,
+				8C26F7C11611000A003967DF /* SESGetIdentityNotificationAttributesResponseUnmarshaller.m in Sources */,
+				8C26F7C21611000A003967DF /* SESGetIdentityVerificationAttributesRequest.m in Sources */,
+				8C26F7C31611000A003967DF /* SESGetIdentityVerificationAttributesRequestMarshaller.m in Sources */,
+				8C26F7C41611000A003967DF /* SESGetIdentityVerificationAttributesResponse.m in Sources */,
+				8C26F7C51611000A003967DF /* SESGetIdentityVerificationAttributesResponseUnmarshaller.m in Sources */,
+				8C26F7C61611000A003967DF /* SESIdentityDkimAttributes.m in Sources */,
+				8C26F7C71611000A003967DF /* SESIdentityDkimAttributesUnmarshaller.m in Sources */,
+				8C26F7C81611000A003967DF /* SESIdentityNotificationAttributes.m in Sources */,
+				8C26F7C91611000A003967DF /* SESIdentityNotificationAttributesUnmarshaller.m in Sources */,
+				8C26F7CA1611000A003967DF /* SESIdentityVerificationAttributes.m in Sources */,
+				8C26F7CB1611000A003967DF /* SESIdentityVerificationAttributesUnmarshaller.m in Sources */,
+				8C26F7CC1611000A003967DF /* SESListIdentitiesRequest.m in Sources */,
+				8C26F7CD1611000A003967DF /* SESListIdentitiesRequestMarshaller.m in Sources */,
+				8C26F7CE1611000A003967DF /* SESListIdentitiesResponse.m in Sources */,
+				8C26F7CF1611000A003967DF /* SESListIdentitiesResponseUnmarshaller.m in Sources */,
+				8C26F7D01611000A003967DF /* SESSetIdentityDkimEnabledRequest.m in Sources */,
+				8C26F7D11611000A003967DF /* SESSetIdentityDkimEnabledRequestMarshaller.m in Sources */,
+				8C26F7D21611000A003967DF /* SESSetIdentityDkimEnabledResponse.m in Sources */,
+				8C26F7D31611000A003967DF /* SESSetIdentityDkimEnabledResponseUnmarshaller.m in Sources */,
+				8C26F7D41611000A003967DF /* SESSetIdentityFeedbackForwardingEnabledRequest.m in Sources */,
+				8C26F7D51611000A003967DF /* SESSetIdentityFeedbackForwardingEnabledRequestMarshaller.m in Sources */,
+				8C26F7D61611000A003967DF /* SESSetIdentityFeedbackForwardingEnabledResponse.m in Sources */,
+				8C26F7D71611000A003967DF /* SESSetIdentityFeedbackForwardingEnabledResponseUnmarshaller.m in Sources */,
+				8C26F7D81611000A003967DF /* SESSetIdentityNotificationTopicRequest.m in Sources */,
+				8C26F7D91611000A003967DF /* SESSetIdentityNotificationTopicRequestMarshaller.m in Sources */,
+				8C26F7DA1611000A003967DF /* SESSetIdentityNotificationTopicResponse.m in Sources */,
+				8C26F7DB1611000A003967DF /* SESSetIdentityNotificationTopicResponseUnmarshaller.m in Sources */,
+				8C26F7DC1611000A003967DF /* SESVerifyDomainDkimRequest.m in Sources */,
+				8C26F7DD1611000A003967DF /* SESVerifyDomainDkimRequestMarshaller.m in Sources */,
+				8C26F7DE1611000A003967DF /* SESVerifyDomainDkimResponse.m in Sources */,
+				8C26F7DF1611000A003967DF /* SESVerifyDomainDkimResponseUnmarshaller.m in Sources */,
+				8C26F7E01611000A003967DF /* SESVerifyDomainIdentityRequest.m in Sources */,
+				8C26F7E11611000A003967DF /* SESVerifyDomainIdentityRequestMarshaller.m in Sources */,
+				8C26F7E21611000A003967DF /* SESVerifyDomainIdentityResponse.m in Sources */,
+				8C26F7E31611000A003967DF /* SESVerifyDomainIdentityResponseUnmarshaller.m in Sources */,
+				8C26F7E41611000A003967DF /* SESVerifyEmailIdentityRequest.m in Sources */,
+				8C26F7E51611000A003967DF /* SESVerifyEmailIdentityRequestMarshaller.m in Sources */,
+				8C26F7E61611000A003967DF /* SESVerifyEmailIdentityResponse.m in Sources */,
+				8C26F7E71611000A003967DF /* SESVerifyEmailIdentityResponseUnmarshaller.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -11794,6 +12562,7 @@
 		8C2A87FD15336E13002B56EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -11810,6 +12579,7 @@
 		8C2A87FE15336E13002B56EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -11842,6 +12612,7 @@
 				8C2A87FE15336E13002B56EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

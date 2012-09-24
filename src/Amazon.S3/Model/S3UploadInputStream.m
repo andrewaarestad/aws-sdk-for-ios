@@ -60,7 +60,7 @@
 -(NSInteger)read:(uint8_t *)buffer maxLength:(NSUInteger)len
 {
 	NSInteger nBytesRead = [stream read:buffer maxLength:(kS3UploadInputStreamChunkSize * packetSize)];
-	AMZLogDebug(@"S3UploadInputStream: read %d bytes (%d max)", nBytesRead, len);
+	AMZLogDebug(@"S3UploadInputStream: read %ld bytes (%ld max)", nBytesRead, len);
 	[NSThread sleepForTimeInterval:delay];
 	return nBytesRead;
 }

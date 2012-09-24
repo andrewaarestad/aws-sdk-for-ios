@@ -122,7 +122,7 @@
         return [S3Region SASaoPaulo];
     }
     
-    AMZLog(@"Invalid S3 region name: '%@'. US Standard is used instead.", regionName);
+    //AMZLog(@"Invalid S3 region name: '%@'. US Standard is used instead.", regionName);
     return [S3Region USStandard];
 }
 

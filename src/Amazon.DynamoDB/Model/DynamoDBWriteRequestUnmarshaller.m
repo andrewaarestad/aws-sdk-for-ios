@@ -15,7 +15,7 @@
 
 #import "DynamoDBWriteRequestUnmarshaller.h"
 #import "DynamoDBExceptionUnmarshaller.h"
-#import "../AmazonSDKUtil.h"
+#import "AmazonSDKUtil.h"
 #import "DynamoDBPutRequestUnmarshaller.h"
 #import "DynamoDBDeleteRequestUnmarshaller.h"
 

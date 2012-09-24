@@ -16,7 +16,7 @@
 
 #import "DynamoDBScanRequestMarshaller.h"
 #import "AmazonJSON.h"
-#import "../AmazonSDKUtil.h"
+#import "AmazonSDKUtil.h"
 
 @implementation DynamoDBScanRequestMarshaller
 
@@ -257,7 +257,7 @@
 
 
     request.content = [AmazonJSON JSONRepresentation:json];
-    [request addValue:[NSString stringWithFormat:@"%d", [[request.content dataUsingEncoding:NSUTF8StringEncoding] length]]    forHeader:@"Content-Length"];
+    [request addValue:[NSString stringWithFormat:@"%ld", [[request.content dataUsingEncoding:NSUTF8StringEncoding] length]]    forHeader:@"Content-Length"];
 
     return [request autorelease];
 }

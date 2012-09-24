@@ -13,7 +13,8 @@
  * permissions and limitations under the License.
  */
 
-#import "../AmazonServiceResponse.h"
+#import "AmazonErrorHandler.h"
+#import "AmazonServiceResponse.h"
 
 /**
  *

@@ -121,7 +121,7 @@
             [timeoutTimer invalidate];     //  invalidate also releases the object.
         }
 
-        AMZLogDebug(@"Response Status Code : %d", response.httpStatusCode);
+        AMZLogDebug(@"Response Status Code : %ld", response.httpStatusCode);
         if ( [self shouldRetry:response exception:((AmazonRequestDelegate *)generatedRequest.delegate).exception]) {
             AMZLog(@"Retring Request: %d", retries);
             generatedRequest.delegate = nil;

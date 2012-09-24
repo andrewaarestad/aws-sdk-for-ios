@@ -19,7 +19,6 @@
 #import "AmazonLogger.h"
 #import "AmazonJSON.h"
 
-
 #define REQUEST_ID_HEADER    @"X-Amzn-Requestid"
 
 @implementation DynamoDBResponse

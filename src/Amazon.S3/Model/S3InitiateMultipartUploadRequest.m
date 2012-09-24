@@ -60,7 +60,7 @@
     }
 
     if (expiresSet) {
-        [self.urlRequest setValue:[NSString stringWithFormat:@"%d", self.expires] forHTTPHeaderField:kHttpHdrExpires];
+        [self.urlRequest setValue:[NSString stringWithFormat:@"%ld", self.expires] forHTTPHeaderField:kHttpHdrExpires];
     }
 
     return urlRequest;

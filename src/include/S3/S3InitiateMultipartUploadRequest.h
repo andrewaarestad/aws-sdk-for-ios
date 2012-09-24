@@ -47,6 +47,6 @@
 @property (nonatomic, retain) NSString *contentEncoding;
 
 /** Number of milliseconds before expiration. */
-@property (nonatomic) int expires;
+@property (nonatomic) long expires;
 
 @end

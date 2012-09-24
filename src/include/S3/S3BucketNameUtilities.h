@@ -14,7 +14,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "../AmazonClientException.h"
+#import "AmazonClientException.h"
 
 /** Utilities for validating bucket names */
 @interface S3BucketNameUtilities:NSObject {

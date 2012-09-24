@@ -13,7 +13,7 @@
  * permissions and limitations under the License.
  */
 
-
+#import "AmazonErrorHandler.h"
 
 // Public Constants
 NSString *const AWSiOSSDKServiceErrorDomain = @"com.amazonaws.iossdk.ServiceErrorDomain";
@@ -48,7 +48,7 @@ static BOOL throwsExceptions = YES;
     }
     else if(throwsExceptions == YES)
     {
-        AMZLogDebug(@"WARNING: An exception was thrown. Please call [AmazonErrorHandler shouldNotThrowExceptions] to change this behavior.");
+        //AMZLogDebug(@"WARNING: An exception was thrown. Please call [AmazonErrorHandler shouldNotThrowExceptions] to change this behavior.");
         @throw exception;
     }
     else if(![exception isKindOfClass:[AmazonClientException class]])

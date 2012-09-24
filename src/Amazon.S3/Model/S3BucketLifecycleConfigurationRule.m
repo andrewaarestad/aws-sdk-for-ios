@@ -30,7 +30,7 @@
     [xml appendFormat:@"<ID>%@</ID>", ruleId];
     [xml appendFormat:@"<Prefix>%@</Prefix>", prefix];
     [xml appendFormat:@"<Status>%@</Status>", status];
-    [xml appendFormat:@"<Expiration><Days>%d</Days></Expiration>", expirationInDays];
+    [xml appendFormat:@"<Expiration><Days>%ld</Days></Expiration>", expirationInDays];
     [xml appendString:@"</Rule>"];
     
     

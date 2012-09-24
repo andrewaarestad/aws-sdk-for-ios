@@ -15,7 +15,7 @@
 
 #import "DynamoDBBatchWriteItemResponseUnmarshaller.h"
 #import "DynamoDBExceptionUnmarshaller.h"
-#import "../AmazonSDKUtil.h"
+#import "AmazonSDKUtil.h"
 #import "DynamoDBBatchWriteResponseUnmarshaller.h"
 #import "DynamoDBBatchWriteResponseUnmarshaller.h"
 #import "DynamoDBWriteRequestUnmarshaller.h"

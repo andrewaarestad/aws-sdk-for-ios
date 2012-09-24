@@ -29,7 +29,7 @@
     const void    *cStr = [data bytes];
     unsigned char result[CC_MD5_DIGEST_LENGTH];
 
-    CC_MD5(cStr, [data length], result);
+    CC_MD5(cStr, (int)[data length], result);
 
     NSData *md5 = [[[NSData alloc] initWithBytes:result length:CC_MD5_DIGEST_LENGTH] autorelease];
     return [md5 base64EncodedString];

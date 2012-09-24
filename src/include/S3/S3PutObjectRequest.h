@@ -91,7 +91,7 @@
 @property (nonatomic, retain) NSInputStream *stream;
 
 /** Number of milliseconds before expiration. */
-@property (nonatomic) int expires;
+@property (nonatomic) long expires;
 
 /** Path of file in the filesystem to be uploaded.
  * The <code>contentLength</code> and <code>contentType</code> will be inferred.

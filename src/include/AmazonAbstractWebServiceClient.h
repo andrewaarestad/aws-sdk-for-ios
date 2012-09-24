@@ -49,7 +49,7 @@ extern NSString *const AWSDefaultRunLoopMode;
  *
  * Default is 5.
  */
-@property (nonatomic, assign) int maxRetries;
+@property (nonatomic, assign) long maxRetries;
 
 /** The amount of time to wait (in seconds) for data to be transfered over
  * an established, open connection before the connection times out and is closed.
@@ -87,7 +87,7 @@ extern NSString *const AWSDefaultRunLoopMode;
  */
 -(AmazonServiceResponse *)invoke:(AmazonServiceRequest *)generatedRequest rawRequest:(AmazonServiceRequestConfig *)originalRequest unmarshallerDelegate:(Class)unmarshallerDelegate;
 
--(void)pauseExponentially:(int)tryCount;
+-(void)pauseExponentially:(long)tryCount;
 -(bool)shouldRetry:(AmazonServiceResponse *)response;
 -(bool)shouldRetry:(AmazonServiceResponse *)response exception:(NSException *)theException;
 

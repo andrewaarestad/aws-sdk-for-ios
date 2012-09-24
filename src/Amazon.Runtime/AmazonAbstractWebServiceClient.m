@@ -89,7 +89,7 @@ NSString *const AWSDefaultRunLoopMode = @"com.amazonaws.DefaultRunLoopMode";
     AmazonServiceResponse *response = nil;
     NSInteger             retries   = 0;
     while (retries < self.maxRetries) {
-        AMZLogDebug(@"Begin Request: %@:%d", NSStringFromClass([generatedRequest class]), retries);
+        AMZLogDebug(@"Begin Request: %@:%ld", NSStringFromClass([generatedRequest class]), retries);
 
         response = [AmazonAbstractWebServiceClient constructResponseFromRequest:generatedRequest];
         [response setRequest:generatedRequest];
@@ -140,9 +140,9 @@ NSString *const AWSDefaultRunLoopMode = @"com.amazonaws.DefaultRunLoopMode";
             [timeoutTimer invalidate];     //  invalidate also releases the object.
         }
 
-        AMZLogDebug(@"Response Status Code : %d", response.httpStatusCode);
+        AMZLogDebug(@"Response Status Code : %ld", response.httpStatusCode);
         if ( [self shouldRetry:response]) {
-            AMZLog(@"Retring Request: %d", retries);
+            AMZLog(@"Retring Request: %ld", retries);
             generatedRequest.delegate = nil;
 
             [self pauseExponentially:retries];
