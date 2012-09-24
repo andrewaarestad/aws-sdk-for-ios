@@ -14,8 +14,8 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "../AmazonServiceException.h"
-#import "../AmazonUnmarshallerXMLParserDelegate.h"
+#import "AmazonServiceException.h"
+#import "AmazonUnmarshallerXMLParserDelegate.h"
 
 /** Parse an error response from Amazon S3 and construct the corresponding
  * AWSServiceException object.

@@ -258,7 +258,7 @@
  * However, the ACL is not preserved and is set to private for the user making the request.
  * To override the default ACL setting, specify a new ACL when generating a copy request.
  */
--(S3CopyObjectResponse *)copyObject:(S3CopyObjectRequest *)copyObjectRequest;
+-(S3CopyObjectResponse *)copyObject:(S3CopyObjectRequest *)copyObjectRequest NS_RETURNS_NOT_RETAINED;
 
 /**
  * Gets the access control list for a given bucket or object.
